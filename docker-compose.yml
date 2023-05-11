@@ -1,0 +1,24 @@
+services:
+  db:
+    container_name: postgre_dev
+    image: postgres:15.2-alpine
+    volumes:
+        - ./postgresql_development:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=database_development
+      - POSTGRES_USER=portfolio_dev_user
+      - POSTGRES_PASSWORD=oent4tu38473928eotuc34t8.3tp,23noec.p#teuroteur
+  web:
+    container_name: web_dev
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    environment:
+      - POSTGRES_NAME=database_development
+      - POSTGRES_USER=portfolio_dev_user
+      - POSTGRES_PASSWORD=oent4tu38473928eotuc34t8.3tp,23noec.p#teuroteur
+    depends_on:
+      - db
