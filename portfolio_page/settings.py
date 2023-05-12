@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'core', # where the common users use the app
+    'auth_manage', # where the security is managed
 ]
 
 MIDDLEWARE = [
