@@ -2,6 +2,11 @@
 from fastapi import FastAPI
 
 app = FastAPI()
+
+@app.get("/")
+async def hello():
+    return {"message": "Hello World"}
+
 # This endpoint will be used to translate the messages
 @app.get("/translate/{filter}")
 async def read_root(filter: str, language: str = None):
