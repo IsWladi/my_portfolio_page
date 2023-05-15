@@ -3,4 +3,5 @@ __pycache__
 *.pyc
 
 # don´t save database until I want test the app in another pc #
-postgresql_development/
+postgresql_development/*
+
