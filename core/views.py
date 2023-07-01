@@ -12,22 +12,21 @@ def index(request):
     current_language = request.META.get('HTTP_ACCEPT_LANGUAGE')
     logger.warning(f'Current language: {current_language}')
     data = False
-    # get data from api with specified language
+
+    # Get all the languages available in the API
+    languages = requests.get('http://api_dev:80/translations/languages/')
+    selected_language = "english" # full name of the language, by default english
+    # languages converted to dictionary
+    languages = languages.json()
     if current_language:
-        first_lang = current_language.split(',')[0]
-        if first_lang.startswith('es'):
-            response = requests.get('http://api_dev:80/translations/all/?language=spanish')
-            data = response.json()
-        elif first_lang.startswith('en'):
-            response = requests.get('http://api_dev:80/translations/all/?language=english')
-            data = response.json()
-        # if lenguage isn´t included in the api, get data in english
-        else:
-            response = requests.get('http://api_dev:80/translations/all/?language=english')
-            data = response.json()
-    # get data from api in english if language is not detected(in case I have more languages in the future)
-    else:
-        response = requests.get('http://api_dev:80/translations/all/?language=english')
-        data = response.json()
+        for i in range(0, len(current_language.split(','))):
+            temp_lang = current_language.split(',')[i]
+            temp_lang = temp_lang[:2] # get the first two letters of the language code
+            if temp_lang in languages:
+                selected_language = languages[temp_lang]
+                break
+
+    response = requests.get(f'http://api_dev:80/translations/all/?language={selected_language}')
+    data = response.json()
     context = {"messages": data}
     return render(request, 'index.html', context)

@@ -5,17 +5,35 @@ import json
 
 router = APIRouter(prefix="/translations", tags=["translations"])
 
-# import messages.json file to get the messages
+# import JSON files
 
-# Obtén la ruta absoluta al directorio actual
+# Get the current directory path
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
-# Construye la ruta completa al archivo JSON
+# Get all the messages from the json file
 json_path = os.path.join(current_dir, "messages.json")
-
-# Lee el archivo JSON
 with open(json_path, "r") as f:
     messages = json.load(f)
+
+#Get all the languages from the json file
+languages_path = os.path.join(current_dir, "languages.json")
+with open(languages_path, "r") as f:
+    languages = json.load(f)
+
+
+# This endpoint will be used to get all the languages
+@router.get("/languages", status_code=200)
+async def get_languages():
+    '''
+    Return all the languages available.
+
+    Returns:
+
+        - languages: dict. The languages dictionary containing all the languages.
+
+    '''
+
+    return languages
 
 # This endpoint will be used to translate the messages
 @router.get("/{filter}", status_code=200)
