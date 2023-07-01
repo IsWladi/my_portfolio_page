@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 def index(request):
     # detect language
     current_language = request.META.get('HTTP_ACCEPT_LANGUAGE')
-    logger.warning(f'Current language: {current_language}')
+    # logger.warning(f'Current language: {current_language}')
     data = False
 
     # Get all the languages available in the API

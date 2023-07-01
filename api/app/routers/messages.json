@@ -1,5 +1,8 @@
 {
   "spanish": {
+    "page": {
+      "title": "Web de Wladi"
+    },
     "about_me": {
       "presentation": "Hola, mi nombre es Wladimir",
       "interests": "Me gusta programar"
@@ -11,6 +14,9 @@
   },
 
   "english": {
+    "page": {
+      "title": "Wladi´s web"
+    },
     "about_me": {
       "presentation": "Hello, my name is Wladimir",
       "interests": "I like coding"
