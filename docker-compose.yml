@@ -4,6 +4,8 @@ services:
     image: postgres:15.2-alpine
     volumes:
         - ./postgresql_development:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
     environment:
       - POSTGRES_DB=database_development
       - POSTGRES_USER=portfolio_dev_user
