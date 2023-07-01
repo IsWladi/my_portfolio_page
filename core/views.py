@@ -16,14 +16,18 @@ def index(request):
     if current_language:
         first_lang = current_language.split(',')[0]
         if first_lang.startswith('es'):
-            response = requests.get('http://api_dev:80/translate/all/?language=es')
+            response = requests.get('http://api_dev:80/translations/all/?language=spanish')
             data = response.json()
         elif first_lang.startswith('en'):
-            response = requests.get('http://api_dev:80/translate/all/?language=en')
+            response = requests.get('http://api_dev:80/translations/all/?language=english')
+            data = response.json()
+        # if lenguage isn´t included in the api, get data in english
+        else:
+            response = requests.get('http://api_dev:80/translations/all/?language=english')
             data = response.json()
     # get data from api in english if language is not detected(in case I have more languages in the future)
     else:
-        response = requests.get('http://api_dev:80/translate/all/?language=en')
+        response = requests.get('http://api_dev:80/translations/all/?language=english')
         data = response.json()
     context = {"messages": data}
     return render(request, 'index.html', context)
