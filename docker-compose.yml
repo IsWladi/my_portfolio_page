@@ -1,17 +1,17 @@
 services:
-  db:
-    container_name: postgre_dev
-    image: postgres:15.2-alpine
-    volumes:
-        - ./postgresql_development:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"
-    environment:
-      - POSTGRES_DB=database_development
-      - POSTGRES_USER=portfolio_dev_user
-      - POSTGRES_PASSWORD=oent4tu38473928eotuc34t8.3tp,23noec.p#teuroteur
-    networks:
-      - portfolio_network
+  # db:
+  #   container_name: postgre_dev
+  #   image: postgres:15.2-alpine
+  #   volumes:
+  #       - ./postgresql_development:/var/lib/postgresql/data
+  #   ports:
+  #     - "5432:5432"
+  #   environment:
+  #     - POSTGRES_DB=database_development
+  #     - POSTGRES_USER=portfolio_dev_user
+  #     - POSTGRES_PASSWORD=oent4tu38473928eotuc34t8.3tp,23noec.p#teuroteur
+  #   networks:
+  #     - portfolio_network
 
   api:
     container_name: api_dev
@@ -37,7 +37,7 @@ services:
       - POSTGRES_USER=portfolio_dev_user
       - POSTGRES_PASSWORD=oent4tu38473928eotuc34t8.3tp,23noec.p#teuroteur
     depends_on:
-      - db
+      # - db
       - api
     networks:
       - portfolio_network
