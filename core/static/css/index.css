@@ -132,6 +132,7 @@ h1 {
   margin: 10px 0;
 }
 
+/* also it is used for the svg icons of my stack */
 .badges-contenedor {
     display: flex;
     justify-content: center;
@@ -377,7 +378,8 @@ footer {
   padding: 20px;
 }
 .stack-img {
-  width: 4rem;
+  width: 3rem;
+  height: 3rem;
   cursor: pointer;
 }
 .stack-img:hover {

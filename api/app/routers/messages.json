@@ -19,8 +19,15 @@
     "stack": {
       "message": "Mi stack",
       "description": "Me gusta trabajar en el ambito del backend y de a poco estoy aprendiendo frontend. Me desenvuelvo bien aprendiendo nuevas tecnologias y leyendo documentación en ingles",
-      "python": "Utilizo Python para desarrollo web con Django y desarrollo de APIs con FastAPI",
-      "docker": "Utilizo Docker para el desarrollo de mis proyectos"
+      "python":{"desc":"Utilizo Python para desarrollo web con Django y desarrollo de APIs con FastAPI",
+                "stars_full":"1234",
+                "stars_half":""},
+      "docker":{"desc":"Utilizo Docker para el desarrollo de mis proyectos",
+                "stars_full":"1234",
+                "stars_half":"1"},
+      "html":{"desc":"Utilizo HTML para el desarrollo de mis proyectos",
+                "stars_full":"123",
+                "stars_half":""}
     }
   },
 
@@ -44,8 +51,16 @@
     "stack": {
       "message": "My stack",
       "description": "I like to work in the backend and I am learning frontend. I am good at learning new technologies and reading documentation in English",
-      "python": "I use Python for web development with Django and API development with FastAPI",
-      "docker": "I use Docker for the development of my projects"
+      "python":{"desc":"I use Python for web development with Django and API development with FastAPI",
+                "stars_full":"1234",
+                "stars_half":""},
+      "docker":{"desc":"I use Docker for the development of my projects",
+                "stars_full":"1234",
+                "stars_half":"1"},
+
+      "html":{"desc":"I use HTML for the development of my projects",
+                "stars_full":"123",
+                "stars_half":""}
     }
   }
 }
