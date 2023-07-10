@@ -1,29 +1,51 @@
 {
   "spanish": {
     "page": {
-      "title": "Web de Wladi"
+      "title": "Web de Wladi",
+      "navbar": {
+        "about_me": "Sobre mí",
+        "projects": "Proyectos",
+        "contact": "Contacto",
+        "testimonials": "Testimonios"
+      }
     },
     "about_me": {
       "presentation": "Hola, mi nombre es Wladimir",
+      "litle_presentation": "Soy un desarrollador de software",
+      "big_presentation": "Soy un desarrollador de software con experiencia en desarrollo web y ciencia de datos. Me gusta aprender nuevas tecnologías y aplicarlas en mis proyectos. Me gusta trabajar en equipo y compartir conocimientos.",
+      "meet_me": "Conóceme",
       "interests": "Me gusta programar"
     },
     "stack": {
-      "python": "Uso Python para ciencia de datos",
-      "javascript": "Uso JavaScript para desarrollo web"
+      "message": "Mi stack",
+      "description": "Me gusta trabajar en el ambito del backend y de a poco estoy aprendiendo frontend. Me desenvuelvo bien aprendiendo nuevas tecnologias y leyendo documentación en ingles",
+      "python": "Utilizo Python para desarrollo web con Django y desarrollo de APIs con FastAPI",
+      "docker": "Utilizo Docker para el desarrollo de mis proyectos"
     }
   },
 
   "english": {
     "page": {
-      "title": "Wladi´s web"
+      "title": "Wladi´s web",
+      "navbar": {
+        "about_me": "About me",
+        "projects": "Projects",
+        "contact": "Contact",
+        "testimonials": "Testimonials"
+      }
     },
     "about_me": {
       "presentation": "Hello, my name is Wladimir",
+      "litle_presentation": "I am a software developer",
+      "big_presentation": "I am a software developer with experience in web development and data science. I like to learn new technologies and apply them in my projects. I like to work in teams and share knowledge.",
+      "meet_me": "Meet me",
       "interests": "I like coding"
     },
     "stack": {
-      "python": "I use Python for data science",
-      "javascript": "I use JavaScript for web development"
+      "message": "My stack",
+      "description": "I like to work in the backend and I am learning frontend. I am good at learning new technologies and reading documentation in English",
+      "python": "I use Python for web development with Django and API development with FastAPI",
+      "docker": "I use Docker for the development of my projects"
     }
   }
 }
