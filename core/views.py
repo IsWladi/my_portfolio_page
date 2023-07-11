@@ -34,7 +34,7 @@ def index(request):
         f'http://api_dev:80/translations/all/?language={selected_language}')
     data = response.json()
     # generate the html for the stack section
-    stacksHtml:str = create_stack(data,settings.STATIC_URL)
+    stacksHtml:List = create_stack(data,settings.STATIC_URL)
 
     context = {"messages": data, "stacksHtml": stacksHtml}
     return render(request, 'index.html', context)

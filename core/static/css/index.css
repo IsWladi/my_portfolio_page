@@ -74,10 +74,17 @@ h1 {
   padding: 3rem;
 }
 
-.hero-imagen-desarrollador {
+#profile-photo {
   width: 200px;
   height: 200px;
   margin: 20px;
+  border-radius: 50%;
+}
+#vertical-bar{
+ /* background-color: black; */
+ margin-left: 2px;
+ /* font-size: 2rem; */
+ animation: line-code-animation 2s infinite alternate;
 }
 
 .hero-principal h2 {
@@ -135,9 +142,9 @@ h1 {
 /* also it is used for the svg icons of my stack */
 .badges-contenedor {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px;
 }
 
 .badge {
@@ -386,6 +393,11 @@ footer {
   transform: scale(1.3);
   transition: all 0.3s ease-in-out;
 }
+#stack-columna:hover{
+  .stack-img{
+    animation: stack-animation 3s infinite alternate;
+  }
+}
 .star {
   width: 0.5rem;
 }
@@ -402,6 +414,34 @@ footer {
 .image-container:hover .stars-container {
   opacity: 1;
 }
+
+@keyframes stack-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes line-code-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 
 /* Adaptable (Responsivo) */
 

@@ -55,8 +55,8 @@
     <!-- Seccion Hero -->
     <section class="hero align-items-stretch">
       <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
-        <img class="hero-imagen-desarrollador rounded-circle" src="{% static 'images/imagenes-desarrolladores/desarrollador-ejemplo.svg' %}" alt="Foto de Jane Doe">
-        <h1>{{messages.about_me.presentation}}</h1>
+        <img id="profile-photo" src="{% static 'images/profile.jpg' %}" alt="Photo of my profile">
+        <h1>{{messages.about_me.presentation}}<span id="vertical-bar">.</span></h1>
         <h2>{{messages.about_me.litle_presentation}}</h2>
       </div>
       <div class="hero-inferior">
@@ -77,7 +77,7 @@
       <div class="container text-center">
         <div class="row">
           <!-- Desarrollo Web -->
-          <div class="columna col-12 col-md-4">
+          <div id="stack-columna" class="columna col-12 col-md-4">
             <i class="bi bi-laptop"></i>
 
             <div id="text-stack">

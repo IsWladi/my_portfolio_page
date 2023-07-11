@@ -30,7 +30,7 @@
                 "stars_half":""},
       "css":{"desc":"Utilizo CSS para el desarrollo de mis proyectos",
                 "stars_full":"123",
-                "stars_half":"1"}
+                "stars_half":""}
     }
   },
 
@@ -67,7 +67,7 @@
 
       "css":{"desc":"I use CSS for the development of my projects",
                 "stars_full":"123",
-                "stars_half":"1"}
+                "stars_half":""}
     }
   }
 }
