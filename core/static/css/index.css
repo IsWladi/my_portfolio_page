@@ -155,13 +155,14 @@ h1 {
 
 .proyectos-recientes {
   padding: 40px;
+  display: flex;;
 }
 
 .proyectos-recientes img {
   height: 100%;
   width: 100%;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 2rem;
   display: block;
   transition: all 0.2s ease;
 }

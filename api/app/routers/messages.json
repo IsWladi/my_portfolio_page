@@ -31,6 +31,18 @@
       "css":{"desc":"Utilizo CSS para el desarrollo de mis proyectos",
                 "stars_full":"123",
                 "stars_half":""}
+    },
+    "projects": {
+      "message": "Mis proyectos recientes",
+      "description": "Estos son algunos proyectos que he creado recientemente...",
+      "gamesite": {
+        "description": "Este es un proyecto de una pagina web de juegos",
+        "github": "https://github.com/Wladimir3984/PROYECTO_BIMESTRE_PROGRAMACION_WEB"
+      },
+      "daclin": {
+        "description": "Aplicación movil para organización de salud personal(citas clinicas, medicamentos, examenes)",
+        "github": "https://github.com/IsWladi/DaClin"
+      }
     }
   },
 
@@ -68,6 +80,20 @@
       "css":{"desc":"I use CSS for the development of my projects",
                 "stars_full":"123",
                 "stars_half":""}
+    },
+
+    "projects": {
+      "message": "My recent projects",
+      "description": "These are some of my recent projects. You can see more in my github profile",
+      "gamesite": {
+        "description": "this is a game site that I made for my institute",
+        "github": "https://github.com/Wladimir3984/PROYECTO_BIMESTRE_PROGRAMACION_WEB"
+      },
+      "daclin": {
+        "description": "Mobile app for the management of a clinic",
+        "github": "https://github.com/IsWladi/DaClin"
+      }
     }
+
   }
 }

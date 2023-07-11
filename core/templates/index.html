@@ -119,115 +119,17 @@
       </div>
     </section>
 
-    <!-- Proyectos -->
+    <!-- Projects -->
     <section id="proyectos" class="proyectos-recientes seccion-clara d-flex flex-column">
-      <h2 class="seccion-titulo texto-negro">Mis proyectos recientes</h2>
-      <h3 class="seccion-descripcion">Estos son algunos proyectos que he creado recientemente...</h3>
+      <h2 class="seccion-titulo texto-negro">{{messages.projects.message}}</h2>
+      <h3 class="seccion-descripcion">{{messages.projects.description}}</h3>
       <!-- Galeria de Proyectos -->
       <div class="container text-center proyectos-contenedor">
         <div class="row">
-          <!-- Proyecto 1 -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="proyecto">
-              <img src="{% static 'images/proyecto1.png' %}" alt="Proyecto 1">
-              <div class="overlay">
-                <p>Proyecto 1</p>
-                <div class="iconos-contenedor">
-                  <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-github"></i>
-                  </a>
-                  <a href="https://www.freecodecamp.org/espanol/" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-laptop"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Proyecto 2 -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="proyecto">
-              <img src="{% static 'images/proyecto2.png' %}" alt="Proyecto 1">
-              <div class="overlay">
-                <p>Proyecto 2</p>
-                <div class="iconos-contenedor">
-                  <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-github"></i>
-                  </a>
-                  <a href="https://www.freecodecamp.org/espanol/" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-laptop"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Proyecto 3 -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="proyecto">
-              <img src="{% static 'images/proyecto3.png' %}" alt="Proyecto 1">
-              <div class="overlay">
-                <p>Proyecto 3</p>
-                <div class="iconos-contenedor">
-                  <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-github"></i>
-                  </a>
-                  <a href="https://www.freecodecamp.org/espanol/" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-laptop"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Proyecto 4 -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="proyecto">
-              <img src="{% static 'images/proyecto4.png' %}" alt="Proyecto 1">
-              <div class="overlay">
-                <p>Proyecto 4</p>
-                <div class="iconos-contenedor">
-                  <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-github"></i>
-                  </a>
-                  <a href="https://www.freecodecamp.org/espanol/" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-laptop"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Proyecto 5 -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="proyecto">
-              <img src="{% static 'images/proyecto5.png' %}" alt="Proyecto 1">
-              <div class="overlay">
-                <p>Proyecto 5</p>
-                <div class="iconos-contenedor">
-                  <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-github"></i>
-                  </a>
-                  <a href="https://www.freecodecamp.org/espanol/" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-laptop"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Proyecto 6 -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="proyecto">
-              <img src="{% static 'images/proyecto6.png' %}" alt="Proyecto 1">
-              <div class="overlay">
-                <p>Proyecto 6</p>
-                <div class="iconos-contenedor">
-                  <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-github"></i>
-                  </a>
-                  <a href="https://www.freecodecamp.org/espanol/" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-laptop"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+          {% for structure in projectsHtml %}
+          {{ structure|safe }}
+          {% endfor %}
+        </div>
         </div>
       </div>
       <a href="https://github.com/" target="_blank" rel="noopener noreferrer">

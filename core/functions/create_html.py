@@ -1,4 +1,32 @@
-def create_stack(data, static_url):
+def create_projects(data, static_url):
+   projectsHtml = []
+   for key, value in data["projects"].items():
+       if key == "message" or key == "description":
+           continue
+       src = f"{static_url}images/projects/{key}.png"
+       title = key.capitalize()
+       description = data["projects"][key]["description"]
+       github = data["projects"][key]["github"]
+       create_structure = f"""
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="proyecto">
+                <img src="{src}" alt="Project {key}" />
+                <div class="overlay">
+                  <p>{title}</p>
+                  <div class="iconos-contenedor">
+                    <a href="{github}" target="_blank" rel="noopener noreferrer">
+                      <i class="bi bi-github"></i>
+                    </a>
+                    <div class="text-wrap">{description}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+       """
+       projectsHtml.append(create_structure)
+   return projectsHtml
+
+def create_stacks(data, static_url):
     """
     Create the html code for the stack section and be able to display it on the page
     """

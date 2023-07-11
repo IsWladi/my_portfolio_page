@@ -4,7 +4,7 @@ import requests
 import logging
 import json
 from django.conf import settings
-from .functions.create_html import create_stack
+from .functions.create_html import create_stacks, create_projects
 # Create your views here.
 
 logger = logging.getLogger(__name__)
@@ -34,7 +34,9 @@ def index(request):
         f'http://api_dev:80/translations/all/?language={selected_language}')
     data = response.json()
     # generate the html for the stack section
-    stacksHtml:List = create_stack(data,settings.STATIC_URL)
+    stacksHtml:List = create_stacks(data,settings.STATIC_URL)
+    # generate the html for the projects section
+    projectsHtml:List = create_projects(data,settings.STATIC_URL)
 
-    context = {"messages": data, "stacksHtml": stacksHtml}
+    context = {"messages": data, "stacksHtml": stacksHtml, "projectsHtml": projectsHtml}
     return render(request, 'index.html', context)
