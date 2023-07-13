@@ -1,5 +1,4 @@
 /* Barra de navegacion */
-
 .navbar {
   padding: 2rem;
   background-color: #f5f6f7;
@@ -194,6 +193,7 @@ h1 {
 
 .proyecto:hover img {
   opacity: 0.2;
+  transform: scale(1.1);
 }
 
 .proyecto:hover .overlay {
