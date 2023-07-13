@@ -1,35 +1,27 @@
-class goInitAnchor extends HTMLElement {
-  constructor() {
-    super();
-  }
-
+class GoInitButton extends HTMLElement {
   connectedCallback() {
     this.attachShadow({mode: 'open'});
     this.render();
   }
 
   render() {
-    const anchor = document.createElement('a');
-    anchor.href = "#navbar-section";
-
-    const button = document.createElement('button');
-    button.className = "btn btn-primary";
-    button.textContent = "Go Up";
-
-    anchor.appendChild(button);
-
-    this.shadowRoot.appendChild(anchor);
-
-    const style = document.createElement('style');
-    style.textContent = this.style();
-    this.shadowRoot.appendChild(style);
+    this.shadowRoot.innerHTML = `
+      <a href="#navbar-section">
+        <button type="button" class="go-init-button">Go Up</button>
+      </a>
+      <style>
+      ${this.style()}
+      </style>
+    `;
   }
-  style() {
+  style(){
     return `
     button {
       border-radius: 30%;
-    }`;
+      background-color: grey;
+    }
+    `;
   }
 }
 
-customElements.define('go-init-anchor', goInitAnchor);
+customElements.define('go-init-button', GoInitButton);
