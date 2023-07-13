@@ -1,12 +1,13 @@
 def create_projects(data, static_url):
    projectsHtml = []
    for key, value in data["projects"].items():
-       if key == "message" or key == "description":
+       if key == "message" or key == "description" or key == "tags":
            continue
        src = f"{static_url}images/projects/{key}.png"
        title = key.capitalize()
        description = data["projects"][key]["description"]
        github = data["projects"][key]["github"]
+       create_tags = "".join([f'<span class="badge text-bg-info">{tag}</span>' for tag in data["projects"][key]["tags"]])
        create_structure = f"""
             <div class="col-12 col-md-6 col-lg-4">
               <div class="proyecto">
@@ -18,6 +19,9 @@ def create_projects(data, static_url):
                       <i class="bi bi-github"></i>
                     </a>
                     <div class="text-wrap">{description}</div>
+                  </div>
+                  <div class="badges-contenedor">
+                  {create_tags}
                   </div>
                 </div>
               </div>

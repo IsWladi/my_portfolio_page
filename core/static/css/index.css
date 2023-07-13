@@ -141,6 +141,7 @@ h1 {
 /* also it is used for the svg icons of my stack */
 .badges-contenedor {
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -154,12 +155,18 @@ h1 {
 
 .proyectos-recientes {
   padding: 40px;
-  display: flex;;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .proyectos-recientes img {
-  height: 100%;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+  margin: 1rem;
   padding: 10px;
   border-radius: 2rem;
   display: block;
@@ -167,6 +174,8 @@ h1 {
 }
 
 .proyectos-contenedor {
+  display: flex;
+  flex-wrap: wrap;
   padding-top: 60px;
   margin-bottom: 40px;
 }
@@ -189,6 +198,8 @@ h1 {
 
 .proyecto {
   position: relative;
+  width: 25rem;
+  height: 20rem;
 }
 
 .proyecto:hover img {
@@ -477,4 +488,24 @@ footer {
   .hero-inferior-imagen {
     max-width: 600px;
   }
+
+@media screen and (min-width: 100px) and (max-width: 730px) {
+  .proyecto {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+@media screen and (min-width: 731px) and (max-width: 1397px) {
+  .proyecto {
+    width: 20rem;
+    height: 15rem;
+  }
+
+@media screen and (min-width: 1400px) {
+  .proyecto {
+  width: 25rem;
+  height: 20rem;
+  }
+
 }

@@ -35,13 +35,31 @@
     "projects": {
       "message": "Mis proyectos recientes",
       "description": "Estos son algunos proyectos que he creado recientemente...",
+
       "gamesite": {
         "description": "Este es un proyecto de una pagina web de juegos",
-        "github": "https://github.com/Wladimir3984/PROYECTO_BIMESTRE_PROGRAMACION_WEB"
+        "github": "https://github.com/Wladimir3984/PROYECTO_BIMESTRE_PROGRAMACION_WEB",
+        "tags": ["Django", "Bootstrap", "JavaScript", "DuocUC"]
       },
       "daclin": {
-        "description": "Aplicación movil para organización de salud personal(citas clinicas, medicamentos, examenes)",
-        "github": "https://github.com/IsWladi/DaClin"
+        "description": "Aplicación movil para organización de salud personal",
+        "github": "https://github.com/IsWladi/DaClin",
+        "tags": ["Ionic", "Angular", "MongoDb Atlas","FastApi", "DuocUc"]
+      },
+      "docker-ionic": {
+        "description": "Plantilla con instrucciones para crear aplicaciones moviles con Ionic y Docker",
+        "github": "https://github.com/Wladimir3984/docker-ionic",
+        "tags": ["Ionic", "Docker", "Docker-Compose", "Self-learning"]
+      },
+      "docker-django":{
+        "description": "Plantilla con instrucciones para crear aplicaciones web con Django, sqlite, PostgreSql y Docker",
+        "github": "https://github.com/Wladimir3984/django-docker",
+        "tags": ["Django", "Docker", "Docker-Compose", "Self-learning"]
+      },
+      "nvim-gittory": {
+        "description": "Plugin para neovim compatible con Windows y Ubuntu",
+        "github": "https://github.com/Wladimir3984/gittory",
+        "tags": ["Neovim", "Lua", "Self-learning"]
       }
     }
   },
@@ -87,11 +105,31 @@
       "description": "These are some of my recent projects. You can see more in my github profile",
       "gamesite": {
         "description": "this is a game site that I made for my institute",
-        "github": "https://github.com/Wladimir3984/PROYECTO_BIMESTRE_PROGRAMACION_WEB"
+        "github": "https://github.com/Wladimir3984/PROYECTO_BIMESTRE_PROGRAMACION_WEB",
+        "tags": ["Django", "Bootstrap", "JavaScript", "DuocUC"]
       },
       "daclin": {
-        "description": "Mobile app for the management of a clinic",
-        "github": "https://github.com/IsWladi/DaClin"
+        "description": "Mobile app for the management of the personal state of health",
+        "github": "https://github.com/IsWladi/DaClin",
+        "tags": ["Ionic", "Angular", "MongoDb Atlas","FastApi", "DuocUc"]
+      },
+
+      "docker-ionic": {
+        "description": "Template with instructions to create mobile applications with Ionic and Docker",
+        "github": "https://github.com/Wladimir3984/docker-ionic",
+        "tags": ["Ionic", "Docker", "Docker-Compose", "Self-learning"]
+      },
+      "docker-django":{
+        "description": "Template with instructions to create web applications with Django with Sqlite or PostgreSql and Docker",
+        "github": "https://github.com/Wladimir3984/django-docker",
+
+        "tags": ["Django", "Docker", "Docker-Compose", "Self-learning"]
+      },
+
+      "nvim-gittory": {
+        "description": "Plugin for Neovim compatible with Windows and Ubuntu",
+        "github": "https://github.com/Wladimir3984/gittory",
+        "tags": ["Neovim", "Lua", "Self-learning"]
       }
     }
 
