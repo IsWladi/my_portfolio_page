@@ -18,19 +18,6 @@ def format_languages(languages:dict):
         only_keys.append(key)
     return only_keys
 
-
-def save_language(request):
-    if request.method == 'POST':
-        lenguaje = request.POST.get('language')
-        # Hacer lo que desees con el valor del lenguaje en tu vista de Django
-        # ...
-        logger.warning(f'Current PosteeeeLANGU: {lenguaje}')
-        logger.warning(f'Current LANGU: {request.POST}')
-
-        return JsonResponse({'success': True})
-    return JsonResponse({'success': False})
-
-
 def index(request):
     # detect language
     current_language = request.META.get('HTTP_ACCEPT_LANGUAGE')

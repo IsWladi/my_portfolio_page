@@ -1,5 +1,16 @@
+import { getLanguage, getApiTranslations } from './apiService/getMessages.js';
+
+async function getMessages(){
+  const userLanguages = getLanguage();
+  const translations = await getApiTranslations(userLanguages);
+  return translations;
+}
+let messages = await getMessages();
+console.log('Messages:', messages);
+// set the messages to the DOM
+// setMessages(messages); // this function is not implemented yet
+
 // Obtén una referencia al div #text-stack
-let textStack = document.getElementById('text-stack');
 let title = document.getElementById('stack-title');
 let desc = document.getElementById('stack-desc');
 const saveTitle = title.textContent;
