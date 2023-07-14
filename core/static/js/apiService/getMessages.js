@@ -15,7 +15,6 @@ export async function getApiTranslations(langCode) {
   let selectedLanguage = "english"; //
 
   if (langCode) {
-    // const langCodes = langCode.split(",");
     for (let i = 0; i < langCode.length; i++) {
       const tempLang = langCode[i].trim().slice(0, 2);
       if (tempLang in languages) {
@@ -30,6 +29,6 @@ export async function getApiTranslations(langCode) {
   )
     .then((response) => response.json())
     .catch((error) => {
-      console.error("Error al obtener las traducciones:", error);
+      console.error("Error: translations not working", error);
     });
 }
