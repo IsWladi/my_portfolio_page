@@ -1,3 +1,36 @@
+def create_lang_selector(languages):
+    """
+    <div id="language-selection">
+      <div class="dropdown">
+        <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span id="selectedValue">Seleccionar opción</span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><a class="dropdown-item" href="#" data-value="opcion1">Opción 1</a></li>
+          <li><a class="dropdown-item" href="#" data-value="opcion2">Opción 2</a></li>
+          <li><a class="dropdown-item" href="#" data-value="opcion3">Opción 3</a></li>
+          <li><a class="dropdown-item" href="#" data-value="opcion4">Opción 4</a></li>
+        </ul>
+      </div>
+    </div>
+    """
+    #create list of languages in html
+    list_items = [f'<li><a class="dropdown-item" href="#" data-value="{lang}">{lang}</a></li>' for lang in languages]
+    list_items = "\n".join(list_items)
+    create_structure = f"""
+    <div id="language-selection">
+      <div class="dropdown">
+        <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span id="selectedValue">Seleccionar opción</span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            {list_items}
+        </ul>
+      </div>
+    </div>
+    """
+    return create_structure
+
 def create_projects(data, static_url):
    projectsHtml = []
    for key, value in data["projects"].items():

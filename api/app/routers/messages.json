@@ -49,17 +49,17 @@
       "docker-ionic": {
         "description": "Plantilla con instrucciones para crear aplicaciones moviles con Ionic y Docker",
         "github": "https://github.com/Wladimir3984/docker-ionic",
-        "tags": ["Ionic", "Docker", "Docker-Compose", "Self-learning"]
+        "tags": ["Ionic", "Docker", "Docker-Compose", "Auto-aprendizaje"]
       },
       "docker-django":{
         "description": "Plantilla con instrucciones para crear aplicaciones web con Django, sqlite, PostgreSql y Docker",
         "github": "https://github.com/Wladimir3984/django-docker",
-        "tags": ["Django", "Docker", "Docker-Compose", "Self-learning"]
+        "tags": ["Django", "Docker", "Docker-Compose", "Auto-aprendizaje"]
       },
       "nvim-gittory": {
         "description": "Plugin para neovim compatible con Windows y Ubuntu",
         "github": "https://github.com/Wladimir3984/gittory",
-        "tags": ["Neovim", "Lua", "Self-learning"]
+        "tags": ["Neovim", "Lua", "Auto-aprendizaje"]
       }
     }
   },
