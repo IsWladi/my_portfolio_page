@@ -1,26 +1,3 @@
-import { getLanguage, getApiTranslations } from "./apiService/getMessages.js";
-import {
-  setStackMessages,
-  setProjectMessages,
-  setGeneralMessages,
-} from "./apiService/setMessages.js";
-
-async function getMessages() {
-  const userLanguages = getLanguage();
-  const translations = await getApiTranslations(userLanguages);
-  return translations;
-}
-let messages = await getMessages();
-console.log("Messages:", messages);
-// set the messages to the DOM
-setStackMessages(messages.stack);
-setProjectMessages(messages.projects);
-let generalMessages = {
-  page: messages.page,
-  about_me: messages.about_me,
-};
-setGeneralMessages(generalMessages);
-
 // Obtén una referencia al div #text-stack
 let title = document.getElementById("stack-title");
 let desc = document.getElementById("stack-desc");

@@ -4,28 +4,37 @@
   <head>
     <!-- Metadatos -->
     <meta charset="utf-8">
-    <meta name="author" content="Jane Doe">
-    <meta name="description" content="Portafolio de desarrollo web de Jane Doe">
-    <meta name="keywords" content="HTML, CSS, JavaScript, React">
+    <meta name="author" content="Wladimir Urzúa Calderón">
+    <meta name="description" content="My portfolio page">
+    <meta name="keywords" content="HTML, CSS, JavaScript, FastApi, Responsive, Interactive">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Titulo -->
-    <title>{{ messages.page.title }}</title>
+    <!-- Title -->
+    <title id="title"></title>
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="imagenes/icono.png">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/icono.png' %}">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <!-- Iconos de Bootstrap -->
+    <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!-- CSS -->
     <link rel="stylesheet" href="{% static '/css/index.css' %}" />
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Rubik+Dirt&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <!-- style in the head tag for better performance -->
+    <style>
+      @font-face {
+        font-family: 'RubikDirt';
+        src: url('../static/css/fonts/RubikDirt-Regular.ttf') format('truetype');
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        font-family: "RubikDirt", cursive;
+    </style>
+    <!-- Set web components and insert HTML -->
     <script src="{% static 'js/components/goBackButton.js' %}"></script>
+    <script type="module" src="{% static 'js/apiService/setMessages.js' %}"></script>
   </head>
   <body>
-    <!-- Barra de navegacion -->
+    <!-- navbar -->
     <header>
     <div id="language-selection">
       {{languagesHtml|safe}}
@@ -41,16 +50,18 @@
           </a>
           <ul class="navbar-nav d-flex justify-content-center align-items-center">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#sobre-mi">{{messages.page.navbar.about_me}}</a>
+              <a class="nav-link active" aria-current="page" href="#sobre-mi">
+               <span id="about-me"></span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#proyectos">{{messages.page.navbar.projects}}</a>
+              <a class="nav-link" href="#proyectos"><span id="projects"></span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#testimonios">{{messages.page.navbar.testimonials}}</a>
+              <a class="nav-link" href="#testimonios"><span id="testimonials"></span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contacto">{{messages.page.navbar.contact}}</a>
+              <a class="nav-link" href="#contacto"><span id="contact"></span></a>
             </li>
           </ul>
         </div>
@@ -58,24 +69,32 @@
     </nav>
     </header>
 
-    <!-- Seccion Hero -->
+    <!-- presentation-->
     <section id="presentation-profile" class="hero align-items-stretch">
       <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
         <img id="profile-photo" src="{% static 'images/profile.jpg' %}" alt="Photo of my profile">
-        <h1>{{messages.about_me.presentation}}<span id="vertical-bar">.</span></h1>
-        <h2>{{messages.about_me.litle_presentation}}</h2>
+        <h1>
+          <span id="presentation"></span>
+          <span id="vertical-bar">.</span></h1>
+        <h2>
+          <span id="litle-presentation"></span>
+        </h2>
       </div>
       <div class="hero-inferior">
         <img class="hero-inferior-imagen img-fluid" src="{% static 'images/hero-inferior.svg' %}" alt="Monitor, laptop y logos de HTML, CSS, JavaScript y React.">
       </div>
     </section>
 
-    <!-- Sobre mi -->
+    <!-- obout me -->
     <section id="sobre-mi" class="sobre-mi seccion-oscura">
       <go-init-button></go-init-button>
       <div class="contenedor">
-        <h2 class="seccion-titulo">{{messages.about_me.meet_me}}</h2>
-        <p class="seccion-texto">{{messages.about_me.big_presentation}}</p>
+        <h2 class="seccion-titulo">
+          <span id="about-me-meet-me"></span>
+        </h2>
+        <p class="seccion-texto">
+          <span id="about-me-big-presentation"></span>
+        </p>
       </div>
     </section>
 
