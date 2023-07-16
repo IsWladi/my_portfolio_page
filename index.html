@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -11,18 +10,18 @@
     <!-- Title -->
     <title id="title"></title>
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{% static 'images/icono.png' %}">
+    <link rel="icon" type="image/x-icon" href="./images/icono.png">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!-- CSS -->
-    <link rel="stylesheet" href="{% static '/css/index.css' %}" />
+    <link rel="stylesheet" href="./css/index.css" />
     <!-- style in the head tag for better performance -->
     <style>
       @font-face {
         font-family: 'RubikDirt';
-        src: url('../static/css/fonts/RubikDirt-Regular.ttf') format('truetype');
+        src: url('./css/fonts/RubikDirt-Regular.ttf') format('truetype');
       }
 
       h1 {
@@ -30,16 +29,13 @@
         font-family: "RubikDirt", cursive;
     </style>
     <!-- Set web components and insert HTML -->
-    <script src="{% static 'js/components/goBackButton.js' %}"></script>
-    <script src="{% static 'js/components/stack.js' %}"></script>
-    <script type="module" src="{% static 'js/apiService/setMessages.js' %}"></script>
+    <script src="./js/components/goBackButton.js"></script>
+    <script src="./js/components/stack.js"></script>
+    <script type="module" src="./js/apiService/setMessages.js"></script>
   </head>
   <body>
     <!-- navbar -->
     <header>
-    <div id="language-selection">
-      {{languagesHtml|safe}}
-    </div>
     <nav id="navbar-section" class="navbar navbar-expand-md navbar-light">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,7 +43,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbar-toggler">
           <a class="navbar-brand" href="#">
-            <img src="{% static 'images/icono.png' %}" width="50" alt="Logo de la página web">
+            <img src="images/icono.png" width="50" alt="Logo de la página web">
           </a>
           <ul class="navbar-nav d-flex justify-content-center align-items-center">
             <li class="nav-item">
@@ -73,7 +69,7 @@
     <!-- presentation-->
     <section id="presentation-profile" class="hero align-items-stretch">
       <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
-        <img id="profile-photo" src="{% static 'images/profile.jpg' %}" alt="Photo of my profile">
+        <img id="profile-photo" src="images/profile.jpg" alt="Photo of my profile">
         <h1>
           <span id="presentation"></span>
           <span id="vertical-bar">.</span></h1>
@@ -82,7 +78,7 @@
         </h2>
       </div>
       <div class="hero-inferior">
-        <img class="hero-inferior-imagen img-fluid" src="{% static 'images/hero-inferior.svg' %}" alt="Monitor, laptop y logos de HTML, CSS, JavaScript y React.">
+        <img class="hero-inferior-imagen img-fluid" src="images/hero-inferior.svg" alt="Monitor, laptop y logos de HTML, CSS, JavaScript y React.">
       </div>
     </section>
 
@@ -147,14 +143,14 @@
     <!-- Projects -->
     <section id="proyectos" class="proyectos-recientes seccion-clara d-flex flex-column">
       <go-init-button></go-init-button>
-      <h2 class="seccion-titulo texto-negro">{{messages.projects.message}}</h2>
-      <h3 class="seccion-descripcion">{{messages.projects.description}}</h3>
+      <h2 class="seccion-titulo texto-negro"><!-- {{messages.projects.message}} --></h2>
+      <h3 class="seccion-descripcion"><!-- {{messages.projects.description}} --></h3>
       <!-- Galeria de Proyectos -->
       <div class="container text-center proyectos-contenedor">
         <div class="row">
-          {% for structure in projectsHtml %}
-          {{ structure|safe }}
-          {% endfor %}
+          <!-- {% for structure in projectsHtml %} -->
+          <!-- {{ structure|safe }} -->
+          <!-- {% endfor %} -->
         </div>
         </div>
       </div>
@@ -221,7 +217,7 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="container">
-              <img class="testimonio-imagen rounded-circle" src="{% static 'images/cliente1.svg' %}" alt="Foto de Gino">
+              <img class="testimonio-imagen rounded-circle" src="images/cliente1.svg" alt="Foto de Gino">
               <p class="testimonio-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel iaculis urna. Fusce a ornare enim, vel interdum turpis. Sed aliquam interdum nisi a placerat.</p>
               <div class="testimonio-info">
                 <p class="cliente">Gino</p>
@@ -231,7 +227,7 @@
           </div>
           <div class="carousel-item">
             <div class="container">
-              <img class="testimonio-imagen rounded-circle" src="{% static 'images/cliente2.svg' %}" alt="Foto de Nora">
+              <img class="testimonio-imagen rounded-circle" src="images/cliente2.svg" alt="Foto de Nora">
               <p class="testimonio-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel iaculis urna. Fusce a ornare enim, vel interdum turpis. Sed aliquam interdum nisi a placerat.</p>
               <div class="testimonio-info">
                 <p class="cliente">Nora</p>
@@ -241,7 +237,7 @@
           </div>
           <div class="carousel-item">
             <div class="container">
-              <img class="testimonio-imagen rounded-circle" src="{% static 'images/cliente3.svg' %}" alt="Foto de Leonardo">
+              <img class="testimonio-imagen rounded-circle" src="images/cliente3.svg" alt="Foto de Leonardo">
               <p class="testimonio-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel iaculis urna. Fusce a ornare enim, vel interdum turpis. Sed aliquam interdum nisi a placerat.</p>
               <div class="testimonio-info">
                 <p class="cliente">Leonardo</p>
@@ -288,7 +284,7 @@
     <!-- Pie de pagina (footer) -->
     <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
       <go-init-button></go-init-button>
-      <img class="footer-logo" src="{% static 'images/icono-blanco.svg' %}" alt="Logo del portafolio">
+      <img class="footer-logo" src="images/icono-blanco.svg" alt="Logo del portafolio">
       <p class="footer-texto text-center">Aprendo y creo todos los días.<br>Creemos un proyecto juntos.</p>
       <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
         <a href="https://twitter.com/freecodecampES" target="_blank" rel="noopener noreferrer">
@@ -311,7 +307,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <script  src="{% static 'js/index.js' %}"></script>
-    <script  src="{% static 'js/language.js' %}"></script>
+    <script  src="./js/index.js"></script>
+    <script  src="./js/language.js"></script>
   </body>
 </html>
