@@ -5,6 +5,20 @@ export function getLanguage() {
   ];
   return language;
 }
+// function for getting the translations of the json file
+export async function getTranslations(langCode) {
+fetch('./messages/languages.json')
+  .then(response => response.json())
+  .then(data => {
+    // Aquí puedes acceder y utilizar los datos del archivo JSON
+    console.log(data);
+  })
+  .catch(error => {
+    // Manejo de errores
+    console.error('Error al cargar el archivo JSON:', error);
+  });
+
+}
 
 // function for getting the translations of the api
 export async function getApiTranslations(langCode) {
