@@ -31,6 +31,7 @@
     </style>
     <!-- Set web components and insert HTML -->
     <script src="{% static 'js/components/goBackButton.js' %}"></script>
+    <script src="{% static 'js/components/stack.js' %}"></script>
     <script type="module" src="{% static 'js/apiService/setMessages.js' %}"></script>
   </head>
   <body>
@@ -114,6 +115,7 @@
 
             <!-- images of my stack -->
             <div class="badges-contenedor">
+              <stack-component name="docker" desc="description1" stars_full="1234" stars_half="1" ></stack-component>
               {% for structure in stacksHtml %}
               {{ structure|safe }}
               {% endfor %}

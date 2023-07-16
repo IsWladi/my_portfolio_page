@@ -394,6 +394,7 @@ footer {
   color: #aeaeae;
   padding: 20px;
 }
+/* stack section */
 .stack-img {
   width: 3rem;
   height: 3rem;
@@ -403,7 +404,7 @@ footer {
   transform: scale(1.3);
   transition: all 0.3s ease-in-out;
 }
-#stack-columna:hover{
+#stack-columna:hover {
   .stack-img{
     animation: stack-animation 3s infinite alternate;
   }
@@ -439,6 +440,7 @@ footer {
     transform: rotate(-10deg);
   }
 }
+/* stack section */
 
 @keyframes line-code-animation {
   0% {
