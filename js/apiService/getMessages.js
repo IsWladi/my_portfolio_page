@@ -8,7 +8,7 @@ export function getLanguage() {
 
 // function for getting the translations of the api
 export async function getApiTranslations(langCode) {
-  const response = await fetch("http://127.0.0.1:9000/translations/languages/");
+  const response = await fetch("https://my_fortfolio_api-1-v4509041.deta.app/translations/languages/");
   const languages = await response.json();
 
   // by default, the language is english
@@ -25,7 +25,7 @@ export async function getApiTranslations(langCode) {
   }
 
   return fetch(
-    `http://127.0.0.1:9000/translations/all/?language=${selectedLanguage}`
+    `https://my_fortfolio_api-1-v4509041.deta.app/translations/all/?language=${selectedLanguage}`
   )
     .then((response) => response.json())
     .catch((error) => {
