@@ -1,4 +1,4 @@
-import { getLanguage, getApiTranslations } from "./getMessages.js";
+import { getLanguage, getApiTranslations, getTranslations } from "./getMessages.js";
 
 async function getMessages() {
   const userLanguages = getLanguage();
@@ -53,7 +53,7 @@ async function getMessages() {
   document.getElementById("about-me-big-presentation").innerHTML = aboutMe.big_presentation;
 }
 
-let messages = await getMessages();
+// let messages = await getMessages();
 console.log("Messages:", messages);
 
 // set the messages to the DOM
@@ -62,7 +62,9 @@ let generalMessages = {
   page: messages.page,
   about_me: messages.about_me,
 };
-setGeneralMessages(generalMessages);
-setStackMessages(messages.stack);
-setProjectMessages(messages.projects);
+// setGeneralMessages(generalMessages);
+// setStackMessages(messages.stack);
+// setProjectMessages(messages.projects);
+const response = await getTranslations("en");
+console.log("response", response);
 
