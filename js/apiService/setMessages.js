@@ -58,10 +58,10 @@ async function getMessages() {
 
 // set the messages to the DOM
 
-let generalMessages = {
-  page: messages.page,
-  about_me: messages.about_me,
-};
+// let generalMessages = {
+//   page: messages.page,
+//   about_me: messages.about_me,
+// };
 // setGeneralMessages(generalMessages);
 // setStackMessages(messages.stack);
 // setProjectMessages(messages.projects);
