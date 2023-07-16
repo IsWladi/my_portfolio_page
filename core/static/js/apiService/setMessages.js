@@ -9,7 +9,24 @@ async function getMessages() {
 // Set all the messages in the DOM
  function setStackMessages(stackMessages){
   console.log("stackMessages desde setMessages.js", stackMessages);
-  return null
+  // Insert title and description
+  document.getElementById("stack-title").innerHTML = stackMessages.message;
+  document.getElementById("stack-desc").innerHTML = stackMessages.description;
+
+  // Create components for each stack
+  let stacks = "";
+  // iterate over object
+  for (const [key, value] of Object.entries(stackMessages)) {
+    if (key == "description" || key == "message") {
+      continue;
+    }
+    // create component
+    const stack = `
+      <stack-component name="${key}" desc="${value.desc}" stars_full="${value.stars_full}" stars_half="${value.stars_half}" ></stack-component>
+  `
+    stacks += stack;
+  }
+  document.querySelector("#stack-columna .badges-contenedor").innerHTML = stacks;
 }
 
  function setProjectMessages(projectMessages){
