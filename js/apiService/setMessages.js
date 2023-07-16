@@ -54,7 +54,7 @@ async function getMessages() {
 }
 
 // let messages = await getMessages();
-console.log("Messages:", messages);
+// console.log("Messages:", messages);
 
 // set the messages to the DOM
 
