@@ -1,4 +1,4 @@
-import { getLanguage, getApiTranslations, getTranslations } from "./getMessages.js";
+import { getLanguage, getApiTranslations } from "./getMessages.js";
 
 function getMessages() {
   const userLanguages = getLanguage();
