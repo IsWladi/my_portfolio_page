@@ -1,3 +1,5 @@
+import { LANGUAGES, MESSAGES } from "./messages.js";
+
 // function for getting the language of the user
 export function getLanguage() {
   let language = navigator.languages || [
@@ -5,25 +7,10 @@ export function getLanguage() {
   ];
   return language;
 }
-// function for getting the translations of the json file
-export async function getTranslations(langCode) {
-fetch('./messages/languages.json')
-  .then(response => response.json())
-  .then(data => {
-    // Aquí puedes acceder y utilizar los datos del archivo JSON
-    console.log(data);
-  })
-  .catch(error => {
-    // Manejo de errores
-    console.error('Error al cargar el archivo JSON:', error);
-  });
-
-}
-
-// function for getting the translations of the api
-export async function getApiTranslations(langCode) {
-  const response = await fetch("https://my_fortfolio_api-1-v4509041.deta.app/translations/languages/");
-  const languages = await response.json();
+// function for getting the translations
+export async function getApiTranslations(langCode="english") {
+  const languages = LANGUAGES.json();
+  const messages = MESSAGES.json();
 
   // by default, the language is english
   let selectedLanguage = "english"; //
@@ -38,11 +25,5 @@ export async function getApiTranslations(langCode) {
     }
   }
 
-  return fetch(
-    `https://my_fortfolio_api-1-v4509041.deta.app/translations/all/?language=${selectedLanguage}`
-  )
-    .then((response) => response.json())
-    .catch((error) => {
-      console.error("Error: translations not working", error);
-    });
+  return messages[selectedLanguage];
 }
