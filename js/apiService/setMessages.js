@@ -8,7 +8,6 @@ function getMessages() {
 
 // Set all the messages in the DOM
  function setStackMessages(stackMessages){
-  console.log("stackMessages desde setMessages.js", stackMessages);
   // Insert title and description
   document.getElementById("stack-title").innerHTML = stackMessages.message;
   document.getElementById("stack-desc").innerHTML = stackMessages.description;
@@ -30,7 +29,6 @@ function getMessages() {
 }
 
  function setProjectMessages(projectMessages){
-  console.log("projectMessages desde setMessages.js", projectMessages);
   return null
 }
 
@@ -56,7 +54,6 @@ function getMessages() {
 let messagesPromise = getMessages();
 
 messagesPromise.then(messages => {
-  console.log("Messages:", messages);
 
   // set the messages to the DOM
   let generalMessages = {
