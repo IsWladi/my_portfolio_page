@@ -39,7 +39,7 @@ class stackComponent extends HTMLElement {
             <style>
             </style>
             <div class="image-container">
-            <img class="stack-img img-fluid" src="../../images/stack/${
+            <img class="stack-img img-fluid" src="./images/stack/${
               this.name
             }.svg" name="${this.name}" desc="${this.desc}"></img>
             <div class="stars-container">
