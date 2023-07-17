@@ -8,7 +8,7 @@ export function getLanguage() {
   return language;
 }
 // function for getting the translations
-export async function getApiTranslations(langCode="english") {
+export async function getApiTranslations(langCode) {
   const languages = LANGUAGES;
   const messages = MESSAGES;
 
@@ -24,6 +24,6 @@ export async function getApiTranslations(langCode="english") {
       }
     }
   }
-
+  console.log("messages[selectedLanguage]", messages[selectedLanguage]);
   return messages[selectedLanguage];
 }
