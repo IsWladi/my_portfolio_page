@@ -9,8 +9,8 @@ export function getLanguage() {
 }
 // function for getting the translations
 export async function getApiTranslations(langCode="english") {
-  const languages = LANGUAGES.json();
-  const messages = MESSAGES.json();
+  const languages = LANGUAGES;
+  const messages = MESSAGES;
 
   // by default, the language is english
   let selectedLanguage = "english"; //
