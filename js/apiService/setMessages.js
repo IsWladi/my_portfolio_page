@@ -53,18 +53,19 @@ function getMessages() {
   document.getElementById("about-me-big-presentation").innerHTML = aboutMe.big_presentation;
 }
 
-let messages = getMessages();
-console.log("Messages:", messages);
+let messagesPromise = getMessages();
 
-// set the messages to the DOM
+messagesPromise.then(messages => {
+  console.log("Messages:", messages);
 
-let generalMessages = {
-  page: messages.page,
-  about_me: messages.about_me,
-};
-setGeneralMessages(generalMessages);
-setStackMessages(messages.stack);
-setProjectMessages(messages.projects);
-console.log("generalMessages", generalMessages);
-console.log("stackMessages", messages.stack);
-console.log("projectMessages", messages.projects);
+  // set the messages to the DOM
+  let generalMessages = {
+    page: messages.page,
+    about_me: messages.about_me,
+  };
+  setGeneralMessages(generalMessages);
+  setStackMessages(messages.stack);
+  setProjectMessages(messages.projects);
+}).catch(error => {
+  console.log("Error fetching messages:", error);
+});
