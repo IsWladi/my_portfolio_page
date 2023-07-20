@@ -20,17 +20,22 @@
     <!-- style in the head tag for better performance -->
     <style>
       @font-face {
-        font-family: 'RubikDirt';
-        src: url('./css/fonts/RubikDirt-Regular.ttf') format('truetype');
+        font-family: 'DancingScript';
+        src: url('./css/fonts/DancingScript.ttf') format('truetype');
       }
 
       h1 {
+        font-size: 3.5rem;
+      }
+      .title-font {
         font-size: 2.5rem;
-        font-family: "RubikDirt", cursive;
+        font-family: "DancingScript", cursive;
+      }
     </style>
     <!-- Set web components and insert HTML -->
     <script src="./js/components/goBackButton.js"></script>
     <script src="./js/components/stack.js"></script>
+    <script src="./js/components/project.js"></script>
     <script type="module" src="./js/apiService/setMessages.js"></script>
   </head>
   <body>
@@ -71,8 +76,8 @@
       <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
         <img id="profile-photo" src="images/profile.jpg" alt="Photo of my profile">
         <h1>
-          <span id="presentation"></span>
-          <span id="vertical-bar">.</span></h1>
+          <span id="presentation" class="title-font"></span>
+          <span id="vertical-bar" class="title-font">.</span></h1>
         <h2>
           <span id="litle-presentation"></span>
         </h2>
@@ -87,7 +92,7 @@
       <go-init-button></go-init-button>
       <div class="contenedor">
         <h2 class="seccion-titulo">
-          <span id="about-me-meet-me"></span>
+          <span id="about-me-meet-me" class="title-font"></span>
         </h2>
         <p class="seccion-texto">
           <span id="about-me-big-presentation"></span>
@@ -105,7 +110,7 @@
             <i class="bi bi-laptop"></i>
 
             <div id="text-stack">
-            <p id="stack-title" class="experiencia-titulo"></p>
+            <p id="stack-title" class="title-font"></p>
             <p id="stack-desc"></p>
             </div>
 
@@ -117,7 +122,7 @@
           <!-- Articulos -->
           <div class="columna col-12 col-md-4">
             <i class="bi bi-laptop"></i>
-            <p class="experiencia-titulo">Artículos</p>
+            <p class="title-font">Artículos</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet, odio eget fringilla scelerisque, sem purus fringilla mauris, nec ultricies nisl nisl sit amet dolor. </p>
             <div class="badges-contenedor">
               <span class="badge text-bg-primary">Escribir</span>
@@ -128,7 +133,7 @@
           <!-- Estudiante -->
           <div class="columna col-12 col-md-4">
             <i class="bi bi-laptop"></i>
-            <p class="experiencia-titulo">Estudiante</p>
+            <p class="title-font">Estudiante</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet, odio eget fringilla scelerisque, sem purus fringilla mauris, nec ultricies nisl nisl sit amet dolor. </p>
             <div class="badges-contenedor">
               <span class="badge text-bg-primary">freeCodeCamp</span>
@@ -148,9 +153,6 @@
       <!-- Galeria de Proyectos -->
       <div class="container text-center proyectos-contenedor">
         <div class="row">
-          <!-- {% for structure in projectsHtml %} -->
-          <!-- {{ structure|safe }} -->
-          <!-- {% endfor %} -->
         </div>
         </div>
       </div>

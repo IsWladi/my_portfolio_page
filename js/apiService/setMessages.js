@@ -29,7 +29,24 @@ function getMessages() {
 }
 
  function setProjectMessages(projectMessages){
-  return null
+   let projects = "";
+   // iterate over object
+  for (const [key, value] of Object.entries(projectMessages)) {
+    if (key == "description" || key == "message") {
+      continue;
+    }
+    // create component
+    const name = key;
+    const desc = value.description;
+    const github = value.github;
+    const tags = value.tags.join(",");
+    const project = `
+          <project-component name="${name}" desc="${desc}" github="${github}" tags="${tags}"></project-component>
+    `
+    projects += project;
+  }
+   console.log(projects);
+   document.querySelector(".proyectos-contenedor>div.row").innerHTML = projects;
 }
 
  function setGeneralMessages(generalMessages){
