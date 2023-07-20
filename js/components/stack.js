@@ -15,6 +15,40 @@ class stackComponent extends HTMLElement {
     this.render();
   }
 
+  style() {
+    return `
+.stack-img {
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+.stack-img:hover {
+  transform: scale(1.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.stars-container {
+  opacity: 0;
+}
+.stars-container img {
+  color: gold;
+}
+
+.star {
+  width: 0.5rem;
+}
+
+.image-container {
+    position: relative;
+    width: 5rem;
+  }
+.image-container:hover .stars-container {
+  opacity: 1;
+}
+
+    `
+  }
+
   render() {
     let full = this.stars_full.length;
     let stars = "";
@@ -37,6 +71,7 @@ class stackComponent extends HTMLElement {
     stars += half_star;
     this.innerHTML = `
             <style>
+              ${this.style()}
             </style>
             <div class="image-container">
             <img class="stack-img img-fluid" src="./images/stack/${
