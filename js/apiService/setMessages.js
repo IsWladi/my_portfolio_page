@@ -20,15 +20,24 @@ function getMessages() {
       continue;
     }
     // create component
+    // Capitalize first letter
+    const name = key.charAt(0).toUpperCase() + key.slice(1);
+    const desc = value.desc.charAt(0).toUpperCase() + value.desc.slice(1);
+
     const stack = `
-      <stack-component name="${key}" desc="${value.desc}" stars_full="${value.stars_full}" stars_half="${value.stars_half}" ></stack-component>
+      <stack-component name="${name}" desc="${desc}" stars_full="${value.stars_full}" stars_half="${value.stars_half}" ></stack-component>
   `
     stacks += stack;
   }
-  document.querySelector("#stack-columna .badges-contenedor").innerHTML = stacks;
+  document.querySelector("#stack-columna .stack-icons-container").innerHTML = stacks;
 }
 
  function setProjectMessages(projectMessages){
+   // Insert title and description
+   document.querySelector(".project-message").innerHTML = projectMessages.message;
+   document.querySelector(".project-desc").innerHTML = projectMessages.description;
+
+   // Insert all projects
    let projects = "";
    // iterate over object
   for (const [key, value] of Object.entries(projectMessages)) {
@@ -41,11 +50,12 @@ function getMessages() {
     const github = value.github;
     const tags = value.tags.join(",");
     const project = `
+        <div class="col-12 col-md-6 col-lg-4">
           <project-component name="${name}" desc="${desc}" github="${github}" tags="${tags}"></project-component>
+        </div>
     `
     projects += project;
   }
-   console.log(projects);
    document.querySelector(".proyectos-contenedor>div.row").innerHTML = projects;
 }
 
