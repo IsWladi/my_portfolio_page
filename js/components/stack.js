@@ -53,6 +53,9 @@ class stackComponent extends HTMLElement {
     let full = this.stars_full.length;
     let stars = "";
     let half_star = "";
+    // Capitalize the first letter of the name and description
+    let name = this.name.charAt(0).toUpperCase() + this.name.slice(1);
+    let desc = this.desc.charAt(0).toUpperCase() + this.desc.slice(1);
     for (let i = 0; i < full; i++) {
       stars += `
           <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -76,7 +79,7 @@ class stackComponent extends HTMLElement {
             <div class="image-container">
             <img class="stack-img img-fluid" src="./images/stack/${
               this.name
-            }.svg" name="${this.name}" desc="${this.desc}"></img>
+            }.svg" name="${name}" desc="${desc}"></img>
             <div class="stars-container">
                 ${stars}
             </div>

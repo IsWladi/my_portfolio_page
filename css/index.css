@@ -169,12 +169,6 @@ section {
   transition: all 0.2s ease;
 }
 
-.proyectos-contenedor {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 60px;
-  margin-bottom: 40px;
-}
 .proyecto .project-tags-container{
   width: 18rem;
   margin-top: 5px;
