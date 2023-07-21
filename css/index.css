@@ -12,7 +12,7 @@
 /* Estilos generales */
 
 /* presetation section */
-.presentation-container{
+.presentation-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -135,7 +135,6 @@ section {
   margin: 10px 0;
 }
 
-/* also it is used for the svg icons of my stack */
 .badges-contenedor {
   font-size: 20px;
   font-weight: bold;
@@ -148,13 +147,26 @@ section {
 
 /* Proyectos */
 
+.projects-container{
+  padding: 0;
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1/4fr));
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 32px;
+}
+
 project-component {
+  margin: 0;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.proyectos-recientes {
+.recent-projects-section {
   padding: 40px;
   display: flex;
   flex-wrap: wrap;
@@ -162,7 +174,7 @@ project-component {
   align-items: center;
 }
 
-.proyectos-recientes img {
+.recent-projects-section img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -174,7 +186,7 @@ project-component {
   transition: all 0.2s ease;
 }
 
-.proyecto .project-tags-container{
+.proyecto .project-tags-container {
   width: 18rem;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -198,7 +210,6 @@ project-component {
   font-weight: bold;
   margin-bottom: 0;
 }
-
 
 /* Articulos */
 
@@ -377,26 +388,37 @@ footer {
 }
 /* stack section */
 
-.stack-icons-container{
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+.stack-icons-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 #stack-columna:hover {
-  .stack-img{
+  .stack-img {
     animation: stack-animation 3s infinite alternate;
   }
 }
 
-.animated-text {
-  overflow: hidden; /* Oculta el desbordamiento del texto */
-  animation: write-text 4s steps(30) forwards;
-  white-space: nowrap; /* Evita el salto de línea */
-  border-right: 2px solid black; /* Simula el cursor de escritura */
-  width: 0; /* Comienza con una anchura de 0 */
+.animated-text{
+  overflow: hidden;
+  animation: write-text 4s steps(30) forwards,
+    vertical-lighting 0.5s ease-in-out 4s infinite alternate;
+  white-space: nowrap;
+  border-right: 0.5px solid black;
+  padding-right: 4px;
+  width: 0;
+}
+
+@keyframes vertical-lighting {
+  0% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: black;
+  }
 }
 
 @keyframes write-text {
@@ -435,25 +457,38 @@ footer {
     font-size: 40px;
   }
 
-  .proyecto:hover img {
-    display: none;
-  }
-  project-component:hover {
-    max-width: 100%;
-    background-color: #ddd;
-    border-radius: 10%;
-    transition: all 0.5s ease-in;
-  }
-
-
+  /* .proyecto:hover img { */
+  /*   display: none; */
+  /* } */
+  /* project-component:hover { */
+  /*   max-width: 100%; */
+  /*   background-color: #ddd; */
+  /*   border-radius: 10%; */
+  /*   transition: all 0.5s ease-in; */
+  /* } */
 }
 
 @media screen and (max-width: 767px) {
   .navbar-brand {
     display: none;
   }
-  .proyecto{
-    transform: scale(0.7) /* translateX(-26%) */;
+  project-component {
+    transform: scale(0.5);
+  }
+  #presentation.title-font {
+    font-size: 2rem;
+  }
+  span#litle-presentation {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 200px) and (max-width: 400px) {
+  #presentation.title-font {
+    font-size: 1.5rem;
+  }
+  span#litle-presentation {
+    font-size: 1rem;
   }
 }
 

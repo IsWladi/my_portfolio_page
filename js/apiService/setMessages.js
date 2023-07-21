@@ -47,13 +47,13 @@ function getMessages() {
     const github = value.github;
     const tags = value.tags.join(",");
     const project = `
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-4 m-0 p-0">
           <project-component name="${name}" desc="${desc}" github="${github}" tags="${tags}"></project-component>
         </div>
     `
     projects += project;
   }
-   document.querySelector(".proyectos-contenedor>div.row").innerHTML = projects;
+   document.querySelector(".projects-container>div.row").innerHTML = projects;
 }
 
  function setGeneralMessages(generalMessages){
