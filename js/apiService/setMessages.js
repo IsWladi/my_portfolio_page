@@ -1,9 +1,23 @@
 import { getLanguage, getApiTranslations } from "./getMessages.js";
+import { LANGUAGES } from "./messages.js";
 
-function getMessages() {
-  const userLanguages = getLanguage();
-  const translations = getApiTranslations(userLanguages);
-  return translations;
+async function getTranslationsAndLanguage() {
+  // Obtenemos los datos utilizando await y la promesa devuelta por getApiTranslations
+  const data = await getApiTranslations(getLanguage());
+
+  function getMessages() {
+    return data.messages;
+  }
+
+  function getSelectedLanguage() {
+    return data.selectedLanguage;
+  }
+
+  // Retornamos un objeto que contiene las funciones que necesitamos acceder
+  return {
+    getMessages,
+    getSelectedLanguage,
+  };
 }
 
 // Set all the messages in the DOM
@@ -56,7 +70,7 @@ function getMessages() {
    document.querySelector(".projects-container>div.row").innerHTML = projects;
 }
 
- function setGeneralMessages(generalMessages){
+ function setGeneralMessages(generalMessages, selectedLanguage){
   //title
   document.getElementById("title").innerHTML = generalMessages.page.title;
   // navbar
@@ -65,7 +79,26 @@ function getMessages() {
   document.getElementById("projects").innerHTML = navbar.projects
   document.getElementById("testimonials").innerHTML = navbar.testimonials
   document.getElementById("contact").innerHTML = navbar.contact
-  //presentation
+  // navbar language selector
+  let languagesKeys = "";
+  let languagesValues  = "";
+  let firstKey = "";
+  let firstValue = "";
+  for (const [key, value] of Object.entries(LANGUAGES)) {
+    if (value == selectedLanguage) {
+      firstKey = key;
+      firstValue = value;
+      continue;
+    }
+    languagesKeys += "," + key;
+    languagesValues += "," + value;
+  }
+  languagesKeys = firstKey + languagesKeys;
+  languagesValues = firstValue + languagesValues;
+  document.getElementsByClassName("nav-item language-selector")[0].innerHTML = `
+    <language-selector-component languagesKeys="${languagesKeys}" languagesValues="${languagesValues}"></language-selector-component>
+   `;
+   //presentation
   const presentation = generalMessages.about_me;
   document.getElementById("presentation").innerHTML = presentation.presentation;
   document.getElementById("litle-presentation").innerHTML = presentation.litle_presentation;
@@ -75,18 +108,19 @@ function getMessages() {
   document.getElementById("about-me-big-presentation").innerHTML = aboutMe.big_presentation;
 }
 
-let messagesPromise = getMessages();
+let messagesPromise = getTranslationsAndLanguage();
 
 messagesPromise.then(messages => {
-
+  const translations = messages.getMessages();
+  const selectedLanguage = messages.getSelectedLanguage();
   // set the messages to the DOM
   let generalMessages = {
-    page: messages.page,
-    about_me: messages.about_me,
+    page: translations.page,
+    about_me: translations.about_me,
   };
-  setGeneralMessages(generalMessages);
-  setStackMessages(messages.stack);
-  setProjectMessages(messages.projects);
+  setGeneralMessages(generalMessages, selectedLanguage);
+  setStackMessages(translations.stack);
+  setProjectMessages(translations.projects);
 }).catch(error => {
   console.log("Error fetching messages:", error);
 });
