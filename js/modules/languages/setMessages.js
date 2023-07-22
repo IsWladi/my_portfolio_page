@@ -1,9 +1,9 @@
-import { getLanguage, getApiTranslations } from "./getMessages.js";
+import { getLanguage, getTranslations } from "./getMessages.js";
 import { LANGUAGES } from "./messages.js";
 
 async function getTranslationsAndLanguage() {
-  // Obtenemos los datos utilizando await y la promesa devuelta por getApiTranslations
-  const data = await getApiTranslations(getLanguage());
+  // Get the translated messages
+  const data = await getTranslations(getLanguage());
 
   function getMessages() {
     return data.messages;
@@ -13,7 +13,7 @@ async function getTranslationsAndLanguage() {
     return data.selectedLanguage;
   }
 
-  // Retornamos un objeto que contiene las funciones que necesitamos acceder
+  // return an object that contains the functions we need to access
   return {
     getMessages,
     getSelectedLanguage,
@@ -108,19 +108,22 @@ async function getTranslationsAndLanguage() {
   document.getElementById("about-me-big-presentation").innerHTML = aboutMe.big_presentation;
 }
 
-let messagesPromise = getTranslationsAndLanguage();
+export function setAllMessages() {
+  let messagesPromise = getTranslationsAndLanguage();
 
-messagesPromise.then(messages => {
-  const translations = messages.getMessages();
-  const selectedLanguage = messages.getSelectedLanguage();
-  // set the messages to the DOM
-  let generalMessages = {
-    page: translations.page,
-    about_me: translations.about_me,
-  };
-  setGeneralMessages(generalMessages, selectedLanguage);
-  setStackMessages(translations.stack);
-  setProjectMessages(translations.projects);
-}).catch(error => {
-  console.log("Error fetching messages:", error);
-});
+  messagesPromise.then(messages => {
+    const translations = messages.getMessages();
+    const selectedLanguage = messages.getSelectedLanguage();
+    // set the messages to the DOM
+    let generalMessages = {
+      page: translations.page,
+      about_me: translations.about_me,
+    };
+    setGeneralMessages(generalMessages, selectedLanguage);
+    setStackMessages(translations.stack);
+    setProjectMessages(translations.projects);
+  }).catch(error => {
+    console.log("Error fetching messages:", error);
+  });
+}
+
