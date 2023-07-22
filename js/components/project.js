@@ -65,7 +65,7 @@ class ProjectComponent extends HTMLElement {
     this.innerHTML = `
             <style>${this.style()}</style>
     <div class="proyecto">
-      <img src="${this.src}" alt="Project ${this.projectName}" />
+      <img loading="lazy" src="${this.src}" alt="Project ${this.projectName}" />
       <div class="overlay">
         <p class="title-font">${this.projectName}</p>
         <div class="iconos-contenedor">

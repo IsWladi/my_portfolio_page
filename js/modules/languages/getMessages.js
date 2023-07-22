@@ -8,7 +8,7 @@ export function getLanguage() {
   return language;
 }
 // function for getting the translations
-export async function getApiTranslations(langCode) {
+export async function getTranslations(langCode) {
   const languages = LANGUAGES;
   const messages = MESSAGES;
   let changeLanguage = localStorage.getItem("language");
