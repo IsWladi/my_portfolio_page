@@ -11,11 +11,12 @@ export function getLanguage() {
 export async function getApiTranslations(langCode) {
   const languages = LANGUAGES;
   const messages = MESSAGES;
+  let changeLanguage = localStorage.getItem("language");
 
   // by default, the language is english
   let selectedLanguage = "english"; //
 
-  if (langCode) {
+  if (langCode && changeLanguage == null) {
     for (let i = 0; i < langCode.length; i++) {
       const tempLang = langCode[i].trim().slice(0, 2);
       if (tempLang in languages) {
@@ -24,6 +25,17 @@ export async function getApiTranslations(langCode) {
       }
     }
   }
+  let translations = "";
+  if (changeLanguage != null) {
+    translations = messages[changeLanguage];
+    selectedLanguage = changeLanguage;
+  }
+  else{
+    translations = messages[selectedLanguage];
+  }
   console.log("messages[selectedLanguage]", messages[selectedLanguage]);
-  return messages[selectedLanguage];
+  return {
+    messages: translations,
+    selectedLanguage: selectedLanguage,
+  }
 }
