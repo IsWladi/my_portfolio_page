@@ -6,10 +6,6 @@ class stackComponent extends HTMLElement {
     this.desc = "";
     this.stars_full = "";
     this.stars_half = "";
-
-    // For the addEventListener
-    this.saveTitle = "";
-    this.saveDesc = "";
   }
   connectedCallback() {
     this.name = this.getAttribute("name");
@@ -17,6 +13,9 @@ class stackComponent extends HTMLElement {
     this.stars_full = this.getAttribute("stars_full");
     this.stars_half = this.getAttribute("stars_half");
     this.render();
+    this.querySelector(".stack-img").addEventListener("click", () => {
+      this.emitInfo();
+    });
   }
 
   style() {
@@ -53,13 +52,24 @@ class stackComponent extends HTMLElement {
     `;
   }
 
+  emitInfo() {
+    let event = new CustomEvent("stackEvent", {
+      detail: {
+        name: this.name,
+        desc: this.desc,
+      },
+      composed: true,
+      bubbles: true,
+    });
+    this.dispatchEvent(event);
+  }
   render() {
     let full = this.stars_full.length;
     let stars = "";
     let half_star = "";
     // Capitalize the first letter of the name and description
-    let name = this.name.charAt(0).toUpperCase() + this.name.slice(1);
-    let desc = this.desc.charAt(0).toUpperCase() + this.desc.slice(1);
+    this.name = this.name.charAt(0).toUpperCase() + this.name.slice(1);
+    this.desc = this.desc.charAt(0).toUpperCase() + this.desc.slice(1);
     for (let i = 0; i < full; i++) {
       stars += `
           <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -83,7 +93,7 @@ class stackComponent extends HTMLElement {
             <div class="image-container">
             <img loading="lazy" class="stack-img img-fluid" src="./images/stack/${
               this.name
-            }.svg" name="${name}" desc="${desc}"></img>
+            }.svg" alt="Image about the technology ${this.name}"></img>
             <div class="stars-container">
                 ${stars}
             </div>

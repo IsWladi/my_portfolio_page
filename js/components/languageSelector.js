@@ -28,6 +28,9 @@ class LanguageSelectorComponent extends HTMLElement {
   }
   style() {
     return `
+    select {
+      border-radius: 1rem;
+    }
     `;
   }
 
