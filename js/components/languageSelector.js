@@ -19,7 +19,7 @@ class LanguageSelectorComponent extends HTMLElement {
       // Get the selected option
       let selectedOption = langSelector.options[langSelector.selectedIndex];
 
-      // Update the language in the local storage and reload the page to apply the changes
+      // Update the language in the local storage
       const language = selectedOption.textContent.toLowerCase();
       localStorage.setItem("language", language);
 
@@ -32,10 +32,6 @@ class LanguageSelectorComponent extends HTMLElement {
         bubbles: true,
       });
       this.dispatchEvent(event);
-
-      // location.reload();
-      const navbarSection = document.getElementById("navbar-section");
-      navbarSection.scrollIntoView({ behavior: "smooth" });
     });
   }
 
