@@ -6,6 +6,7 @@ class LanguageSelectorComponent extends HTMLElement {
     this.languagesKeys = [];
     this.languagesValues = [];
   }
+
   connectedCallback() {
     this.languagesKeys = this.getAttribute("languagesKeys").split(",");
     this.languagesValues = this.getAttribute("languagesValues").split(",");
@@ -18,14 +19,22 @@ class LanguageSelectorComponent extends HTMLElement {
       // Get the selected option
       let selectedOption = langSelector.options[langSelector.selectedIndex];
 
-      // Update the language in the local storage and reload the page to apply the changes
-      localStorage.setItem("language", selectedOption.textContent.toLowerCase());
-      location.reload();
-      const navbarSection = document.getElementById("navbar-section");
-      navbarSection.scrollIntoView({ behavior: "smooth" });
+      // Update the language in the local storage
+      const language = selectedOption.textContent.toLowerCase();
+      localStorage.setItem("language", language);
 
+      // Dispatch a custom event "languageStatus" to notify parent components about the language change
+      let event = new CustomEvent("languageStatus", {
+        detail: {
+          language: language,
+        },
+        composed: true,
+        bubbles: true,
+      });
+      this.dispatchEvent(event);
     });
   }
+
   style() {
     return `
     select {

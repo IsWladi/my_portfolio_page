@@ -2,30 +2,40 @@
 <html lang="es">
   <head>
     <!-- Metadatos -->
-    <meta charset="utf-8">
-    <meta name="author" content="Wladimir Urzúa Calderón">
-    <meta name="description" content="My portfolio page">
-    <meta name="keywords" content="HTML, CSS, JavaScript, FastApi, Responsive, Interactive">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="author" content="Wladimir Urzúa Calderón" />
+    <meta name="description" content="My portfolio page" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, FastApi, Responsive, Interactive"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Title -->
     <title id="title"></title>
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./images/icono.png">
+    <link rel="icon" type="image/x-icon" href="./images/icono.png" />
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
 
     <!-- Bootstrap icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
     <!-- CSS -->
     <link rel="stylesheet" href="./css/index.css" />
     <!-- style in the head tag for better performance -->
     <style>
       @font-face {
-        font-family: 'DancingScript';
-        src:
-          url('./css/fonts/DancingScript.woff2') format('woff2'),
-          url('./css/fonts/DancingScript.woff') format('woff'),
-          url('./css/fonts/DancingScript.ttf') format('truetype');
+        font-family: "DancingScript";
+        src: url("./css/fonts/DancingScript.woff2") format("woff2"),
+          url("./css/fonts/DancingScript.woff") format("woff"),
+          url("./css/fonts/DancingScript.ttf") format("truetype");
       }
 
       h1 {
@@ -36,48 +46,76 @@
         font-family: "DancingScript", cursive;
       }
     </style>
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
     <script type="module" src="./js/index.js"></script>
   </head>
   <body>
     <!-- navbar -->
     <header>
-    <nav id="navbar-section" class="navbar navbar-expand-md navbar-light">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar-toggler">
-          <a class="navbar-brand" href="#">
-            <img src="images/icono.png" width="50" alt="Logo de la página web">
-          </a>
-          <ul class="navbar-nav d-flex justify-content-center align-items-center">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#sobre-mi">
-               <span id="about-me"></span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#proyectos"><span id="projects"></span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#testimonios"><span id="testimonials"></span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contacto"><span id="contact"></span></a>
-            </li>
-            <li class="nav-item language-selector">
-            </li>
-          </ul>
+      <nav id="navbar-section" class="navbar navbar-expand-md navbar-light">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar-toggler"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar-toggler">
+            <a class="navbar-brand" href="#">
+              <img
+                src="images/icono.png"
+                width="50"
+                alt="Logo de la página web"
+              />
+            </a>
+            <ul
+              class="navbar-nav d-flex justify-content-center align-items-center"
+            >
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#sobre-mi">
+                  <span id="about-me"></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#proyectos"
+                  ><span id="projects"></span
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#testimonios"
+                  ><span id="testimonials"></span
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacto"
+                  ><span id="contact"></span
+                ></a>
+              </li>
+              <li class="nav-item language-selector"></li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
     </header>
 
     <!-- presentation-->
     <section id="presentation-profile" class="hero presentation-container">
       <div class="hero-principal">
-        <img id="profile-photo" src="images/profile.jpg" alt="Photo of my profile">
+        <img
+          id="profile-photo"
+          src="images/profile.jpg"
+          alt="Photo of my profile"
+        />
         <h1 class="animated-text">
           <span id="presentation" class="title-font"></span>
         </h1>
@@ -86,7 +124,11 @@
         </h2>
       </div>
       <div class="hero-inferior">
-        <img class="hero-inferior-imagen img-fluid" src="images/hero-inferior.svg" alt="Monitor, laptop y logos de HTML, CSS, JavaScript y React.">
+        <img
+          class="hero-inferior-imagen img-fluid"
+          src="images/hero-inferior.svg"
+          alt="Monitor, laptop y logos de HTML, CSS, JavaScript y React."
+        />
       </div>
     </section>
 
@@ -111,20 +153,23 @@
             <i class="bi bi-laptop"></i>
 
             <div id="text-stack">
-            <p id="stack-title" class="title-font"></p>
-            <p id="stack-desc"></p>
+              <p id="stack-title" class="title-font"></p>
+              <p id="stack-desc"></p>
             </div>
 
             <!-- images of my stack -->
-            <div class="stack-icons-container">
-            </div>
+            <div class="stack-icons-container"></div>
             <!-- images of my stack -->
           </div>
           <!-- Articulos -->
           <div class="columna col-12 col-md-4">
             <i class="bi bi-laptop"></i>
             <p class="title-font">Artículos</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet, odio eget fringilla scelerisque, sem purus fringilla mauris, nec ultricies nisl nisl sit amet dolor. </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+              laoreet, odio eget fringilla scelerisque, sem purus fringilla
+              mauris, nec ultricies nisl nisl sit amet dolor.
+            </p>
             <div class="badges-contenedor">
               <span class="badge text-bg-primary">Escribir</span>
               <span class="badge text-bg-primary">Editar</span>
@@ -135,7 +180,11 @@
           <div class="columna col-12 col-md-4">
             <i class="bi bi-laptop"></i>
             <p class="title-font">Estudiante</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet, odio eget fringilla scelerisque, sem purus fringilla mauris, nec ultricies nisl nisl sit amet dolor. </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+              laoreet, odio eget fringilla scelerisque, sem purus fringilla
+              mauris, nec ultricies nisl nisl sit amet dolor.
+            </p>
             <div class="badges-contenedor">
               <span class="badge text-bg-primary">freeCodeCamp</span>
               <span class="badge text-bg-primary">Desarrollo Web</span>
@@ -156,8 +205,7 @@
       </h3>
       <!-- Galeria de Proyectos -->
       <div class="container text-center projects-container">
-        <div class="row ">
-        </div>
+        <div class="row"></div>
       </div>
       <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
         <button type="button" class="btn btn-info">
@@ -171,38 +219,65 @@
     <section class="articulos justify-content-start">
       <h2 class="seccion-titulo texto-negro">Artículos</h2>
       <div class="card">
-        <div class="card-header">
-          Más recientes
-        </div>
+        <div class="card-header">Más recientes</div>
         <ul class="list-group list-group-flush">
-          <a href="https://www.freecodecamp.org/espanol/news/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.freecodecamp.org/espanol/news/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <li class="list-group-item">
-              El decorador @property en Python - cómo usarlo, ventajas y sintaxis
+              El decorador @property en Python - cómo usarlo, ventajas y
+              sintaxis
             </li>
           </a>
-          <a href="https://www.freecodecamp.org/espanol/news/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.freecodecamp.org/espanol/news/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <li class="list-group-item">
-              Python tutorial ciclos while - while True ejemplos de sintaxis y ciclos infinitos
+              Python tutorial ciclos while - while True ejemplos de sintaxis y
+              ciclos infinitos
             </li>
           </a>
-          <a href="https://www.freecodecamp.org/espanol/news/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.freecodecamp.org/espanol/news/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <li class="list-group-item">
-              Python leer archivo JSON - cómo cargar JSON desde un archivo y procesar dumps
+              Python leer archivo JSON - cómo cargar JSON desde un archivo y
+              procesar dumps
             </li>
           </a>
-          <a href="https://www.freecodecamp.org/espanol/news/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.freecodecamp.org/espanol/news/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <li class="list-group-item">
-              Python cómo escribir en un archivo - abrir, leer, escribir y otras funciones de archivos explicadas
+              Python cómo escribir en un archivo - abrir, leer, escribir y otras
+              funciones de archivos explicadas
             </li>
           </a>
-          <a href="https://www.freecodecamp.org/espanol/news/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.freecodecamp.org/espanol/news/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <li class="list-group-item">
-              ¿Para qué se usa Python? 10+ usos del lenguaje de programación Python
+              ¿Para qué se usa Python? 10+ usos del lenguaje de programación
+              Python
             </li>
           </a>
         </ul>
       </div>
-      <a href="https://www.freecodecamp.org/espanol/news/" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://www.freecodecamp.org/espanol/news/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <button type="button" class="btn btn-info">
           Ver más artículos
           <i class="bi bi-arrow-right-circle-fill"></i>
@@ -213,15 +288,30 @@
     <!-- Testimonios -->
     <section id="testimonios" class="testimonios seccion-clara">
       <h2 class="seccion-titulo">Testimonios</h2>
-      <h3 class="seccion-descripcion">Estos son algunos testimonios de mis clientes...</h3>
+      <h3 class="seccion-descripcion">
+        Estos son algunos testimonios de mis clientes...
+      </h3>
 
       <!-- Carrusel -->
-      <div id="testimonios-carrusel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      <div
+        id="testimonios-carrusel"
+        class="carousel carousel-dark slide"
+        data-bs-ride="carousel"
+      >
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="container">
-              <img class="testimonio-imagen rounded-circle" src="images/cliente1.svg" alt="Foto de Gino" loading="lazy">
-              <p class="testimonio-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel iaculis urna. Fusce a ornare enim, vel interdum turpis. Sed aliquam interdum nisi a placerat.</p>
+              <img
+                class="testimonio-imagen rounded-circle"
+                src="images/cliente1.svg"
+                alt="Foto de Gino"
+                loading="lazy"
+              />
+              <p class="testimonio-texto">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel
+                iaculis urna. Fusce a ornare enim, vel interdum turpis. Sed
+                aliquam interdum nisi a placerat.
+              </p>
               <div class="testimonio-info">
                 <p class="cliente">Gino</p>
                 <p class="cargo">Gerente de proyectos en DesarrolloWeb</p>
@@ -230,8 +320,17 @@
           </div>
           <div class="carousel-item">
             <div class="container">
-              <img class="testimonio-imagen rounded-circle" src="images/cliente2.svg" alt="Foto de Nora" loading="lazy">
-              <p class="testimonio-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel iaculis urna. Fusce a ornare enim, vel interdum turpis. Sed aliquam interdum nisi a placerat.</p>
+              <img
+                class="testimonio-imagen rounded-circle"
+                src="images/cliente2.svg"
+                alt="Foto de Nora"
+                loading="lazy"
+              />
+              <p class="testimonio-texto">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel
+                iaculis urna. Fusce a ornare enim, vel interdum turpis. Sed
+                aliquam interdum nisi a placerat.
+              </p>
               <div class="testimonio-info">
                 <p class="cliente">Nora</p>
                 <p class="cargo">Gerente de DiseñaMiPáginaWeb</p>
@@ -240,8 +339,17 @@
           </div>
           <div class="carousel-item">
             <div class="container">
-              <img class="testimonio-imagen rounded-circle" src="images/cliente3.svg" alt="Foto de Leonardo" loading="lazy">
-              <p class="testimonio-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel iaculis urna. Fusce a ornare enim, vel interdum turpis. Sed aliquam interdum nisi a placerat.</p>
+              <img
+                class="testimonio-imagen rounded-circle"
+                src="images/cliente3.svg"
+                alt="Foto de Leonardo"
+                loading="lazy"
+              />
+              <p class="testimonio-texto">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel
+                iaculis urna. Fusce a ornare enim, vel interdum turpis. Sed
+                aliquam interdum nisi a placerat.
+              </p>
               <div class="testimonio-info">
                 <p class="cliente">Leonardo</p>
                 <p class="cargo">Director de AprendeAProgramar</p>
@@ -249,11 +357,21 @@
             </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#testimonios-carrusel" data-bs-slide="prev">
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#testimonios-carrusel"
+          data-bs-slide="prev"
+        >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Anterior</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#testimonios-carrusel" data-bs-slide="next">
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#testimonios-carrusel"
+          data-bs-slide="next"
+        >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Siguiente</span>
         </button>
@@ -263,13 +381,14 @@
     <!-- Contacto -->
     <section id="contacto" class="contacto seccion-oscura">
       <div class="container">
-        <div class="container text-center rectangulo d-flex justify-content-evenly">
+        <div
+          class="container text-center rectangulo d-flex justify-content-evenly"
+        >
           <div class="row">
-            <div class="col-12 col-md-4 seccion-titulo">
-              ¡Hablemos!
-            </div>
+            <div class="col-12 col-md-4 seccion-titulo">¡Hablemos!</div>
             <div class="col-12 col-md-4 descripcion">
-              Contáctame para iniciar tu proyecto de desarrollo web y haré que tu visión se vuelva realidad.
+              Contáctame para iniciar tu proyecto de desarrollo web y haré que
+              tu visión se vuelva realidad.
             </div>
             <div class="col-12 col-md-4">
               <a href="mailto:janedoe@micorreo.com">
@@ -285,27 +404,60 @@
     </section>
 
     <!-- Pie de pagina (footer) -->
-    <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
-      <img class="footer-logo" src="images/icono-blanco.svg" alt="Logo del portafolio" loading="lazy">
-      <p class="footer-texto text-center">Aprendo y creo todos los días.<br>Creemos un proyecto juntos.</p>
-      <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
-        <a href="https://twitter.com/freecodecampES" target="_blank" rel="noopener noreferrer">
+    <footer
+      class="seccion-oscura d-flex flex-column align-items-center justify-content-center"
+    >
+      <img
+        class="footer-logo"
+        src="images/icono-blanco.svg"
+        alt="Logo del portafolio"
+        loading="lazy"
+      />
+      <p class="footer-texto text-center">
+        Aprendo y creo todos los días.<br />Creemos un proyecto juntos.
+      </p>
+      <div
+        class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center"
+      >
+        <a
+          href="https://twitter.com/freecodecampES"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i class="bi bi-twitter"></i>
         </a>
-        <a href="https://github.com/freeCodeCamp/freeCodeCamp" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/freeCodeCamp/freeCodeCamp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i class="bi bi-github"></i>
         </a>
-        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.linkedin.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i class="bi bi-linkedin"></i>
         </a>
-        <a href="https://www.instagram.com/freecodecamp/" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.instagram.com/freecodecamp/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i class="bi bi-instagram"></i>
         </a>
-        <a href="mailto:janedoe@micorreo.com" target="_blank" rel="noopener noreferrer">
+        <a
+          href="mailto:janedoe@micorreo.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i class="bi bi-envelope"></i>
         </a>
       </div>
-      <div class="derechos-de-autor">Creado por Wladimir Urzúa Calderón (2023) &#169;</div>
+      <div class="derechos-de-autor">
+        Creado por Wladimir Urzúa Calderón (2023) &#169;
+      </div>
     </footer>
   </body>
 </html>

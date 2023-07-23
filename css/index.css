@@ -1,4 +1,8 @@
-/* Barra de navegacion */
+/* When the user has changed the language, trigger an animation. */
+body.language-has-changed {
+  animation: body-language-has-changed-animation 1s ease-in-out;
+}
+/* Navigation bar */
 .navbar {
   padding: 2rem;
   background-color: #f5f6f7;
@@ -9,7 +13,7 @@
   justify-content: space-between;
 }
 
-/* Estilos generales */
+/* General styles */
 
 /* presetation section */
 .presentation-container {
@@ -147,7 +151,7 @@ section {
 
 /* Proyectos */
 
-.projects-container{
+.projects-container {
   padding: 0;
   margin: 1rem 0;
   display: grid;
@@ -402,7 +406,7 @@ footer {
   }
 }
 
-.animated-text{
+.animated-text {
   overflow: hidden;
   animation: write-text 4s steps(30) forwards,
     vertical-lighting 0.5s ease-in-out 4s infinite alternate;
@@ -410,6 +414,41 @@ footer {
   border-right: 0.5px solid black;
   padding-right: 4px;
   width: 0;
+}
+@keyframes body-language-has-changed-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-2px, -2px);
+  }
+  20% {
+    transform: translate(2px, 2px);
+  }
+  30% {
+    transform: translate(-2px, -2px);
+  }
+  40% {
+    transform: translate(2px, 2px);
+  }
+  50% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  70% {
+    transform: translate(-2px, -2px);
+  }
+  80% {
+    transform: translate(2px, 2px);
+  }
+  90% {
+    transform: translate(-2px, -2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 @keyframes vertical-lighting {

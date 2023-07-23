@@ -91,9 +91,9 @@ class stackComponent extends HTMLElement {
               ${this.style()}
             </style>
             <div class="image-container">
-            <img loading="lazy" class="stack-img img-fluid" src="./images/stack/${
-              this.name.toLowerCase()
-            }.svg" alt="Image about the technology ${this.name}"></img>
+            <img loading="lazy" class="stack-img img-fluid" src="./images/stack/${this.name.toLowerCase()}.svg" alt="Image about the technology ${
+      this.name
+    }"></img>
             <div class="stars-container">
                 ${stars}
             </div>

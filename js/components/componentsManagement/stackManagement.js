@@ -8,12 +8,6 @@ export function manageStackComponents() {
   let title = "";
   let desc = "";
 
-  //Function to reset the content of the stack section
-  function resetContent() {
-    title.innerHTML = saveTitle;
-    desc.innerHTML = saveDesc;
-  }
-
   // Capture custom event
   document
     .querySelector(".stack-icons-container")
@@ -25,17 +19,18 @@ export function manageStackComponents() {
         saveTitle = title.textContent;
         saveDesc = desc.textContent;
         firstTime = false;
+
+        //Add the click event to reset the content when you click anywhere outside the images
+        document.addEventListener("click", function (event) {
+          if (!event.target.classList.contains("stack-img")) {
+            title.innerHTML = saveTitle;
+            desc.innerHTML = saveDesc;
+          }
+        });
       }
 
       //Update the content of the #text-stack div
       title.innerHTML = e.detail.name;
       desc.innerHTML = e.detail.desc;
     });
-
-  //Add the click event to reset the content when you click anywhere outside the images
-  document.addEventListener("click", function (event) {
-    if (!event.target.classList.contains("stack-img")) {
-      resetContent();
-    }
-  });
 }
