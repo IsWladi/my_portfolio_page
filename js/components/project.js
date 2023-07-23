@@ -10,25 +10,28 @@ class ProjectComponent extends HTMLElement {
     this.create_structure = "";
   }
   connectedCallback() {
-       this.projectName = this.getAttribute("name").replace(/_/g, " ");
-       this.src = `./images/projects/${this.projectName.replace(/ /g, "-")}.png`;
-       this.description =  this.getAttribute("desc");
-       this.github = this.getAttribute("github");
-       let create_tags = this.getAttribute("tags").split(",");
-       for (let i = 0; i < create_tags.length; i++) {
-         this.tags += `<span class="badge text-bg-info">${create_tags[i]}</span>`;
-       }
-       // Capitalize
-       this.projectName = this.projectName.split(" ");
-       for (let i = 0; i < this.projectName.length; i++) {
-         this.projectName[i] = this.projectName[i].charAt(0).toUpperCase() + this.projectName[i].slice(1);
-       }
-       this.projectName = this.projectName.join(" ");
+    this.projectName = this.getAttribute("name").replace(/_/g, " ");
+    this.src = `./images/projects/${this.projectName.replace(/ /g, "-")}.png`;
+    this.description = this.getAttribute("desc");
+    this.github = this.getAttribute("github");
+    let create_tags = this.getAttribute("tags").split(",");
+    for (let i = 0; i < create_tags.length; i++) {
+      this.tags += `<span class="badge text-bg-info">${create_tags[i]}</span>`;
+    }
+    // Capitalize
+    this.projectName = this.projectName.split(" ");
+    for (let i = 0; i < this.projectName.length; i++) {
+      this.projectName[i] =
+        this.projectName[i].charAt(0).toUpperCase() +
+        this.projectName[i].slice(1);
+    }
+    this.projectName = this.projectName.join(" ");
 
-       this.description = this.description.charAt(0).toUpperCase() + this.description.slice(1);
-       this.render();
+    this.description =
+      this.description.charAt(0).toUpperCase() + this.description.slice(1);
+    this.render();
   }
-  style(){
+  style() {
     return `
       .proyecto {
         position: relative;
@@ -58,7 +61,7 @@ class ProjectComponent extends HTMLElement {
       p.title-font {
         font-size: 2.5rem;
       }
-    `
+    `;
   }
 
   render() {

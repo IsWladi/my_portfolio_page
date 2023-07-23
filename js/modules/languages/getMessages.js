@@ -11,6 +11,7 @@ export function getLanguage() {
 export async function getTranslations(langCode) {
   const languages = LANGUAGES;
   const messages = MESSAGES;
+
   let changeLanguage = localStorage.getItem("language");
 
   // by default, the language is english
@@ -29,13 +30,11 @@ export async function getTranslations(langCode) {
   if (changeLanguage != null) {
     translations = messages[changeLanguage];
     selectedLanguage = changeLanguage;
-  }
-  else{
+  } else {
     translations = messages[selectedLanguage];
   }
-  console.log("messages[selectedLanguage]", messages[selectedLanguage]);
   return {
     messages: translations,
     selectedLanguage: selectedLanguage,
-  }
+  };
 }

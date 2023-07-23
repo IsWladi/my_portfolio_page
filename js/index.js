@@ -5,10 +5,12 @@ import "./components/project.js";
 import "./components/upButton.js";
 // Import modules and functions
 import { setAllMessages } from "./modules/languages/setMessages.js";
+import { manageLanguageComponents } from "./components/componentsManagement/languageSelectorManagement.js";
 import { manageStackComponents } from "./components/componentsManagement/stackManagement.js";
 
 // Set translated messages to the DOM
 setAllMessages();
 
 // Give funcitonality to the components
+manageLanguageComponents();
 manageStackComponents();
