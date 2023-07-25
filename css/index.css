@@ -1,11 +1,45 @@
+:root {
+  /* navbar */
+
+  /* light color scheme */
+  --light-background-color-navbar: #f5f6f7;
+
+  /* dark color scheme */
+  --dark-background-color-navbar: indigo;
+  --dark-color-navbar: white;
+
+  /* end navbar colors*/
+
+  /* sections */
+
+  /* light color scheme */
+  --light-background-color-primary-section: #1b1b32;
+  --light-background-color-secondary-section: white;
+
+  /* dark color scheme */
+  --dark-background-color-primary-section: violet;
+  --dark-color-primary-section: white;
+  --dark-background-color-secondary-section: #1b1b32;
+
+  /* end sections colors */
+}
+
 /* When the user has changed the language, trigger an animation. */
 body.language-has-changed {
   animation: body-language-has-changed-animation 0.5s ease-in-out;
 }
 /* Navigation bar */
-.navbar {
+nav.navbar {
   padding: 2rem;
-  background-color: #f5f6f7;
+  background-color: var(--light-background-color-navbar);
+}
+
+.dark-color-scheme nav.navbar {
+  background-color: var(--dark-background-color-navbar);
+}
+
+.dark-color-scheme nav.navbar li.nav-item > a.nav-link {
+  color: var(--dark-color-navbar);
 }
 
 .navbar-collapse {
@@ -30,12 +64,17 @@ section {
   justify-content: center;
 }
 
-.seccion-oscura {
+.primary-section {
   color: white;
-  background-color: #1b1b32;
+  background-color: var(--light-background-color-primary-section);
 }
 
-.seccion-clara {
+.dark-color-scheme .primary-section {
+  background-color: var(--dark-background-color-primary-section);
+  color: var(--dark-color-primary-section);
+}
+
+.secondary-section {
   color: black;
   background-color: white;
 }
@@ -416,7 +455,7 @@ footer {
   padding-right: 4px;
   width: 0;
 }
-#litle-presentation{
+#litle-presentation {
   visibility: hidden;
   animation: sub-presentation-animation 1s ease-in-out 1.8s forwards;
 
@@ -424,9 +463,8 @@ footer {
 }
 @keyframes sub-presentation-animation {
   0% {
-  opacity: 0;
-  visibility: hidden;
-
+    opacity: 0;
+    visibility: hidden;
   }
   100% {
     opacity: 1;
@@ -487,16 +525,6 @@ footer {
   .overlay i {
     font-size: 40px;
   }
-
-  /* .proyecto:hover img { */
-  /*   display: none; */
-  /* } */
-  /* project-component:hover { */
-  /*   max-width: 100%; */
-  /*   background-color: #ddd; */
-  /*   border-radius: 10%; */
-  /*   transition: all 0.5s ease-in; */
-  /* } */
 }
 
 @media screen and (max-width: 767px) {
