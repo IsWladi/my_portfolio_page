@@ -1,12 +1,16 @@
 :root {
+  /* fonts colors */
+  --light-color: black;
+  --dark-color: white;
+  /* end fonts colors */
+
   /* navbar */
 
   /* light color scheme */
   --light-background-color-navbar: #f5f6f7;
 
   /* dark color scheme */
-  --dark-background-color-navbar: indigo;
-  --dark-color-navbar: white;
+  --dark-background-color-navbar: black;
 
   /* end navbar colors*/
 
@@ -17,13 +21,11 @@
   --light-background-color-secondary-section: white;
 
   /* dark color scheme */
-  --dark-background-color-primary-section: violet;
-  --dark-color-primary-section: white;
-  --dark-background-color-secondary-section: #1b1b32;
+  --dark-background-color-primary-section: black;
+  --dark-background-color-secondary-section: indigo;
 
   /* end sections colors */
 }
-
 /* When the user has changed the language, trigger an animation. */
 body.language-has-changed {
   animation: body-language-has-changed-animation 0.5s ease-in-out;
@@ -37,9 +39,12 @@ nav.navbar {
 .dark-color-scheme nav.navbar {
   background-color: var(--dark-background-color-navbar);
 }
+.dark-color-scheme button.navbar-toggler{
+  border-color: var(--dark-color);
+}
 
 .dark-color-scheme nav.navbar li.nav-item > a.nav-link {
-  color: var(--dark-color-navbar);
+  color: var(--dark-color);
 }
 
 .navbar-collapse {
@@ -71,7 +76,7 @@ section {
 
 .dark-color-scheme .primary-section {
   background-color: var(--dark-background-color-primary-section);
-  color: var(--dark-color-primary-section);
+  color: var(--dark-color);
 }
 
 .secondary-section {

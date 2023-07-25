@@ -2,7 +2,6 @@
 class LanguageSelectorComponent extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
     this.languagesKeys = [];
     this.languagesValues = [];
   }
@@ -12,7 +11,7 @@ class LanguageSelectorComponent extends HTMLElement {
     this.languagesValues = this.getAttribute("languagesValues").split(",");
     this.render();
     // Give functionality for the language selector
-    let langSelector = this.shadowRoot.querySelector("#languages");
+    let langSelector = this.querySelector("#languages");
 
     // Add the change event to the language selector
     langSelector.addEventListener("change", function () {
@@ -38,7 +37,12 @@ class LanguageSelectorComponent extends HTMLElement {
   style() {
     return `
     select {
-      border-radius: 1rem;
+      color: var(--light-color);
+      background-color: var(--light-background-color-navbar);
+    }
+    .dark-color-scheme select {
+      color: var(--dark-color);
+      background-color: var(--dark-background-color-navbar);
     }
     `;
   }
@@ -54,7 +58,8 @@ class LanguageSelectorComponent extends HTMLElement {
         this.languagesValues[i].slice(1);
       renderedLanguages += `<option class="lang-selector-option" value="${this.languagesKeys[i]}">${capitalizedLanguage}</option>`;
     }
-    this.shadowRoot.innerHTML = `
+    this.innerHTML = `
+            <style>${this.style()}</style>
             <select id="languages">
               ${renderedLanguages}
             </select>
