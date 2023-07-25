@@ -1,6 +1,6 @@
 /* When the user has changed the language, trigger an animation. */
 body.language-has-changed {
-  animation: body-language-has-changed-animation 1s ease-in-out;
+  animation: body-language-has-changed-animation 0.5s ease-in-out;
 }
 /* Navigation bar */
 .navbar {
@@ -408,46 +408,37 @@ footer {
 
 .animated-text {
   overflow: hidden;
-  animation: write-text 4s steps(30) forwards,
+  animation: write-text 2s steps(30) forwards,
     vertical-lighting 0.5s ease-in-out 4s infinite alternate;
   white-space: nowrap;
   border-right: 0.5px solid black;
   padding-right: 4px;
   width: 0;
 }
-@keyframes body-language-has-changed-animation {
+#litle-presentation{
+  visibility: hidden;
+  animation: sub-presentation-animation 1s ease-in-out 1.8s forwards;
+
+  font-size: 1rem;
+}
+@keyframes sub-presentation-animation {
   0% {
-    transform: translate(0, 0);
-  }
-  10% {
-    transform: translate(-2px, -2px);
-  }
-  20% {
-    transform: translate(2px, 2px);
-  }
-  30% {
-    transform: translate(-2px, -2px);
-  }
-  40% {
-    transform: translate(2px, 2px);
-  }
-  50% {
-    transform: translate(-2px, -2px);
-  }
-  60% {
-    transform: translate(2px, 2px);
-  }
-  70% {
-    transform: translate(-2px, -2px);
-  }
-  80% {
-    transform: translate(2px, 2px);
-  }
-  90% {
-    transform: translate(-2px, -2px);
+  opacity: 0;
+  visibility: hidden;
+
   }
   100% {
-    transform: translate(0, 0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes body-language-has-changed-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -518,7 +509,7 @@ footer {
     font-size: 2rem;
   }
   span#litle-presentation {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -527,7 +518,7 @@ footer {
     font-size: 1.5rem;
   }
   span#litle-presentation {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
