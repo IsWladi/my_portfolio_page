@@ -81,6 +81,7 @@ section {
 }
 
 #profile-photo {
+  filter: drop-shadow(10px 10px 15px black);
   width: 200px;
   height: 200px;
   margin: 20px;
