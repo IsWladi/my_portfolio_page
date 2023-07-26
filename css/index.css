@@ -1,8 +1,10 @@
 :root {
-  /* fonts colors */
+  /* general colors */
   --light-color: black;
   --dark-color: white;
-  /* end fonts colors */
+  --light-primary-background-color: white;
+  --dark-primary-background-color: black;
+  /* end general colors */
 
   /* navbar */
 
@@ -13,23 +15,19 @@
   --dark-background-color-navbar: black;
 
   /* end navbar colors*/
-
-  /* sections */
-
-  /* light color scheme */
-  --light-background-color-primary-section: #1b1b32;
-  --light-background-color-secondary-section: white;
-
-  /* dark color scheme */
-  --dark-background-color-primary-section: black;
-  --dark-background-color-secondary-section: indigo;
-
-  /* end sections colors */
 }
 /* When the user has changed the language, trigger an animation. */
 body.language-has-changed {
   animation: body-language-has-changed-animation 0.5s ease-in-out;
 }
+
+.general-background-color {
+  background-color: var(--light-primary-background-color);
+}
+.dark-color-scheme .general-background-color {
+  background-color: var(--dark-primary-background-color);
+}
+
 /* Navigation bar */
 nav.navbar {
   padding: 2rem;
@@ -37,7 +35,7 @@ nav.navbar {
 }
 
 .dark-color-scheme nav.navbar {
-  background-color: var(--dark-background-color-navbar);
+  background-color: var(--dark-primary-background-color);
 }
 .dark-color-scheme button.navbar-toggler{
   border-color: var(--dark-color);
@@ -75,13 +73,15 @@ section {
 }
 
 .dark-color-scheme .primary-section {
-  background-color: var(--dark-background-color-primary-section);
   color: var(--dark-color);
 }
 
 .secondary-section {
   color: black;
   background-color: white;
+}
+.dark-color-scheme .secondary-section {
+  color: white;
 }
 
 .seccion-titulo {
@@ -115,9 +115,13 @@ section {
 /* Seccion Hero */
 
 .hero {
-  background-color: #f5f6f7;
+  background-color: var(--light-primary-background-color);
   min-height: 450px;
   text-align: center;
+}
+.dark-color-scheme .hero {
+  background-color: var(--dark-primary-background-color);
+  color: var(--dark-color);
 }
 
 .hero-principal {
@@ -130,6 +134,10 @@ section {
   height: 200px;
   margin: 20px;
   border-radius: 50%;
+}
+
+.dark-color-scheme #profile-photo {
+  filter: drop-shadow(10px 10px 15px #643B47);
 }
 
 .hero-principal h2 {
@@ -258,23 +266,6 @@ project-component {
   font-size: 25px;
   font-weight: bold;
   margin-bottom: 0;
-}
-
-/* Articulos */
-
-.articulos {
-  min-height: 500px;
-  padding: 30px;
-}
-
-.articulos .card {
-  width: 80%;
-  max-width: 600px;
-  margin: 20px;
-}
-
-.articulos .card-header {
-  font-weight: bold;
 }
 
 /* Testimonios */
