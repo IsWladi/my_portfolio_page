@@ -14,6 +14,6 @@ import { manageStackComponents } from "./components/componentsManagement/stackMa
 setAllMessages();
 
 // Give funcitonality to the components
-manageLanguageComponents();
 manageThemeComponents();
+manageLanguageComponents();
 manageStackComponents();
