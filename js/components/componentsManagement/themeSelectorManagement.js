@@ -1,9 +1,11 @@
 export function manageThemeComponents(){
   // Set light mode if it was set before
   let themeMode = localStorage.getItem("themeMode");
+  const body = document.querySelector("body");
   if (themeMode === "light") {
-    let body = document.querySelector("body");
     body.classList.remove("dark-color-scheme");
+  } else if (themeMode === "dark") {
+    body.classList.add("dark-color-scheme");
   }
 
   // Capture custom event
