@@ -1,21 +1,3 @@
-:root {
-  /* general colors */
-  --light-color: black;
-  --dark-color: white;
-  --light-primary-background-color: white;
-  --dark-primary-background-color: black;
-  /* end general colors */
-
-  /* navbar */
-
-  /* light color scheme */
-  --light-background-color-navbar: #f5f6f7;
-
-  /* dark color scheme */
-  --dark-background-color-navbar: black;
-
-  /* end navbar colors*/
-}
 /* When the user has changed the language, trigger an animation. */
 body.language-has-changed {
   animation: body-language-has-changed-animation 0.5s ease-in-out;
@@ -24,25 +6,11 @@ body.language-has-changed {
 .general-background-color {
   background-color: var(--light-primary-background-color);
 }
-.dark-color-scheme .general-background-color {
-  background-color: var(--dark-primary-background-color);
-}
 
 /* Navigation bar */
 nav.navbar {
   padding: 2rem;
   background-color: var(--light-background-color-navbar);
-}
-
-.dark-color-scheme nav.navbar {
-  background-color: var(--dark-primary-background-color);
-}
-.dark-color-scheme button.navbar-toggler{
-  border-color: var(--dark-color);
-}
-
-.dark-color-scheme nav.navbar li.nav-item > a.nav-link {
-  color: var(--dark-color);
 }
 
 .navbar-collapse {
@@ -72,16 +40,9 @@ section {
   background-color: var(--light-background-color-primary-section);
 }
 
-.dark-color-scheme .primary-section {
-  color: var(--dark-color);
-}
-
 .secondary-section {
   color: black;
   background-color: white;
-}
-.dark-color-scheme .secondary-section {
-  color: white;
 }
 
 .seccion-titulo {
@@ -104,24 +65,12 @@ section {
   margin: 20px;
 }
 
-.texto-negro {
-  color: black;
-}
-
-.texto-blanco {
-  color: white;
-}
-
 /* Seccion Hero */
 
 .hero {
   background-color: var(--light-primary-background-color);
   min-height: 450px;
   text-align: center;
-}
-.dark-color-scheme .hero {
-  background-color: var(--dark-primary-background-color);
-  color: var(--dark-color);
 }
 
 .hero-principal {
@@ -134,10 +83,6 @@ section {
   height: 200px;
   margin: 20px;
   border-radius: 50%;
-}
-
-.dark-color-scheme #profile-photo {
-  filter: drop-shadow(10px 10px 15px #643B47);
 }
 
 .hero-principal h2 {
