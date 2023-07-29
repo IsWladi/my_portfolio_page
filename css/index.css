@@ -1,16 +1,60 @@
+/* background-colors */
+.dark-color-scheme .general-background-color {
+  background-color: var(--dark-primary-background-color);
+}
+
+.dark-color-scheme nav.navbar {
+  background-color: var(--dark-primary-background-color);
+}
+.dark-color-scheme button.navbar-toggler {
+  border-color: var(--dark-color);
+}
+
+.dark-color-scheme nav.navbar li.nav-item > a.nav-link {
+  color: var(--dark-color);
+}
+
+.dark-color-scheme .primary-section {
+  color: var(--dark-color);
+}
+
+.dark-color-scheme .secondary-section {
+  color: white;
+}
+
+.dark-color-scheme .presentation-container {
+  background-color: var(--dark-background-color-presentation);
+  color: var(--dark-color);
+
+  background-image: linear-gradient(to bottom, #000000, #040404, #080807, #0c0c0b, #0F0F0E);
+}
+
+.dark-color-scheme .sobre-mi {
+  background-image: linear-gradient(to top, #000000, #040404, #080807, #0c0c0b, #0F0F0E);
+}
+
+.dark-color-scheme .experiencia {
+background-image: linear-gradient(to bottom, #000000, #0e0005, #17000c, #1c0014, #1f001b);
+}
+
+.dark-color-scheme .recent-projects-section{
+background-image: linear-gradient(to top, #000000, #0e0005, #17000c, #1c0014, #1f001b);
+}
+
+.dark-color-scheme #profile-photo {
+  filter: drop-shadow(10px 10px 15px #643b47);
+}
+/* end background-colors */
+
 /* When the user has changed the language, trigger an animation. */
 body.language-has-changed {
   animation: body-language-has-changed-animation 0.5s ease-in-out;
 }
 
-.general-background-color {
-  background-color: var(--light-primary-background-color);
-}
 
 /* Navigation bar */
 nav.navbar {
   padding: 2rem;
-  background-color: var(--light-background-color-navbar);
 }
 
 .navbar-collapse {
@@ -33,16 +77,6 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.primary-section {
-  color: white;
-  background-color: var(--light-background-color-primary-section);
-}
-
-.secondary-section {
-  color: black;
-  background-color: white;
 }
 
 .seccion-titulo {
@@ -68,7 +102,6 @@ section {
 /* Seccion Hero */
 
 .hero {
-  background-color: var(--light-primary-background-color);
   min-height: 450px;
   text-align: center;
 }
