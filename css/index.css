@@ -6,9 +6,6 @@
 .dark-color-scheme nav.navbar {
   background-color: var(--dark-primary-background-color);
 }
-.dark-color-scheme button.navbar-toggler {
-  border-color: var(--dark-color);
-}
 
 .dark-color-scheme nav.navbar li.nav-item > a.nav-link {
   color: var(--dark-color);
@@ -20,6 +17,20 @@
 
 .dark-color-scheme .secondary-section {
   color: white;
+}
+button.more-projects-button{
+  background-color: var(--primary-color);
+  margin-top: 2rem;
+}
+button.more-projects-button:hover{
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+}
+section span.badge {
+  background-color: var(--primary-color);
+}
+section span.badge.project-badge {
+  background-color: var(--secondary-color);
 }
 
 .dark-color-scheme .presentation-container {
@@ -42,7 +53,7 @@ background-image: linear-gradient(to top, #000000, #0e0005, #17000c, #1c0014, #1
 }
 
 .dark-color-scheme #profile-photo {
-  filter: drop-shadow(10px 10px 15px #643b47);
+  filter: drop-shadow(2px 2px 5px var(--primary-color));
 }
 /* end background-colors */
 
@@ -120,7 +131,7 @@ section {
 
 .hero-principal h2 {
   font-size: 1.5rem;
-  color: #615151;
+  color: var(--dark-color);
 }
 
 /* Sobre mi */
@@ -310,7 +321,7 @@ project-component {
 
 .contacto .rectangulo {
   margin-top: -5rem;
-  background-color: rgb(13, 110, 253);
+  background-color: var(--primary-color);
   border-radius: 10px;
   box-shadow: 0px 1px 4px 1px white;
 }
@@ -421,17 +432,14 @@ footer {
 }
 
 .animated-text {
-  overflow: hidden;
-  animation: write-text 2s steps(30) forwards,
-    vertical-lighting 0.5s ease-in-out 4s infinite alternate;
   white-space: nowrap;
-  border-right: 0.5px solid black;
-  padding-right: 4px;
-  width: 0;
+  visibility: hidden;
+  animation: sub-presentation-animation 1.5s ease-in-out forwards;
 }
+
 #litle-presentation {
   visibility: hidden;
-  animation: sub-presentation-animation 1s ease-in-out 1.8s forwards;
+  animation: sub-presentation-animation 1.5s ease-in-out 1s forwards;
 
   font-size: 1rem;
 }
@@ -452,24 +460,6 @@ footer {
   }
   100% {
     opacity: 1;
-  }
-}
-
-@keyframes vertical-lighting {
-  0% {
-    border-color: transparent;
-  }
-  100% {
-    border-color: black;
-  }
-}
-
-@keyframes write-text {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
   }
 }
 
