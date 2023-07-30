@@ -29,9 +29,6 @@ button.more-projects-button:hover{
 section span.badge {
   background-color: var(--primary-color);
 }
-section span.badge.project-badge {
-  background-color: var(--secondary-color);
-}
 
 .dark-color-scheme .presentation-container {
   background-color: var(--dark-background-color-presentation);
@@ -363,15 +360,15 @@ project-component {
   color: black;
 }
 
-/* Pie de pagina (footer) */
+/* Footer */
 
 footer {
   min-height: 500px;
 }
 
 .footer-logo {
-  height: 80px;
-  width: 80px;
+  height: 100px;
+  width: 100px;
   margin: 10px;
 }
 
