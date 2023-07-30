@@ -1,0 +1,24 @@
+:root {
+  /* general colors */
+  --primary-color: #9C6D97;
+  --secondary-color: #002120;
+  --dark-color: white;
+  --dark-primary-background-color: black;
+  /* end general colors */
+
+  /* navbar */
+
+  /* dark color scheme */
+  --dark-background-color-navbar: black;
+
+  /* end navbar colors*/
+
+  /* sections */
+
+  /* dark color scheme */
+  --dark-background-color-primary-section: black;
+  --dark-background-color-secondary-section: indigo;
+
+  /* end sections colors */
+}
+

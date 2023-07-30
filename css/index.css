@@ -1,11 +1,68 @@
+/* background-colors */
+.dark-color-scheme .general-background-color {
+  background-color: var(--dark-primary-background-color);
+}
+
+.dark-color-scheme nav.navbar {
+  background-color: var(--dark-primary-background-color);
+}
+
+.dark-color-scheme nav.navbar li.nav-item > a.nav-link {
+  color: var(--dark-color);
+}
+
+.dark-color-scheme .primary-section {
+  color: var(--dark-color);
+}
+
+.dark-color-scheme .secondary-section {
+  color: white;
+}
+button.more-projects-button{
+  background-color: var(--primary-color);
+  margin-top: 2rem;
+}
+button.more-projects-button:hover{
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+}
+section span.badge {
+  background-color: var(--primary-color);
+}
+
+.dark-color-scheme .presentation-container {
+  background-color: var(--dark-background-color-presentation);
+  color: var(--dark-color);
+
+  background-image: linear-gradient(to bottom, #000000, #040404, #080807, #0c0c0b, #0F0F0E);
+}
+
+.dark-color-scheme .sobre-mi {
+  background-image: linear-gradient(to top, #000000, #040404, #080807, #0c0c0b, #0F0F0E);
+}
+
+.dark-color-scheme .experiencia {
+background-image: linear-gradient(to bottom, #000000, #0e0005, #17000c, #1c0014, #1f001b);
+}
+
+.dark-color-scheme .recent-projects-section{
+background-image: linear-gradient(to top, #000000, #0e0005, #17000c, #1c0014, #1f001b);
+}
+
+.dark-color-scheme #profile-photo {
+  filter: drop-shadow(2px 2px 5px var(--primary-color));
+}
+/* end background-colors */
+
 /* When the user has changed the language, trigger an animation. */
 body.language-has-changed {
   animation: body-language-has-changed-animation 0.5s ease-in-out;
 }
+
+
 /* Navigation bar */
-.navbar {
+nav.navbar {
   padding: 2rem;
-  background-color: #f5f6f7;
 }
 
 .navbar-collapse {
@@ -30,16 +87,6 @@ section {
   justify-content: center;
 }
 
-.seccion-oscura {
-  color: white;
-  background-color: #1b1b32;
-}
-
-.seccion-clara {
-  color: black;
-  background-color: white;
-}
-
 .seccion-titulo {
   font-size: 2rem;
   padding: 15px 0;
@@ -60,18 +107,9 @@ section {
   margin: 20px;
 }
 
-.texto-negro {
-  color: black;
-}
-
-.texto-blanco {
-  color: white;
-}
-
 /* Seccion Hero */
 
 .hero {
-  background-color: #f5f6f7;
   min-height: 450px;
   text-align: center;
 }
@@ -90,7 +128,7 @@ section {
 
 .hero-principal h2 {
   font-size: 1.5rem;
-  color: #615151;
+  color: var(--dark-color);
 }
 
 /* Sobre mi */
@@ -216,23 +254,6 @@ project-component {
   margin-bottom: 0;
 }
 
-/* Articulos */
-
-.articulos {
-  min-height: 500px;
-  padding: 30px;
-}
-
-.articulos .card {
-  width: 80%;
-  max-width: 600px;
-  margin: 20px;
-}
-
-.articulos .card-header {
-  font-weight: bold;
-}
-
 /* Testimonios */
 
 .testimonios {
@@ -297,7 +318,7 @@ project-component {
 
 .contacto .rectangulo {
   margin-top: -5rem;
-  background-color: rgb(13, 110, 253);
+  background-color: var(--primary-color);
   border-radius: 10px;
   box-shadow: 0px 1px 4px 1px white;
 }
@@ -339,15 +360,15 @@ project-component {
   color: black;
 }
 
-/* Pie de pagina (footer) */
+/* Footer */
 
 footer {
   min-height: 500px;
 }
 
 .footer-logo {
-  height: 80px;
-  width: 80px;
+  height: 100px;
+  width: 100px;
   margin: 10px;
 }
 
@@ -408,25 +429,21 @@ footer {
 }
 
 .animated-text {
-  overflow: hidden;
-  animation: write-text 2s steps(30) forwards,
-    vertical-lighting 0.5s ease-in-out 4s infinite alternate;
   white-space: nowrap;
-  border-right: 0.5px solid black;
-  padding-right: 4px;
-  width: 0;
-}
-#litle-presentation{
   visibility: hidden;
-  animation: sub-presentation-animation 1s ease-in-out 1.8s forwards;
+  animation: sub-presentation-animation 1.5s ease-in-out forwards;
+}
+
+#litle-presentation {
+  visibility: hidden;
+  animation: sub-presentation-animation 1.5s ease-in-out 1s forwards;
 
   font-size: 1rem;
 }
 @keyframes sub-presentation-animation {
   0% {
-  opacity: 0;
-  visibility: hidden;
-
+    opacity: 0;
+    visibility: hidden;
   }
   100% {
     opacity: 1;
@@ -440,24 +457,6 @@ footer {
   }
   100% {
     opacity: 1;
-  }
-}
-
-@keyframes vertical-lighting {
-  0% {
-    border-color: transparent;
-  }
-  100% {
-    border-color: black;
-  }
-}
-
-@keyframes write-text {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
   }
 }
 
@@ -487,16 +486,6 @@ footer {
   .overlay i {
     font-size: 40px;
   }
-
-  /* .proyecto:hover img { */
-  /*   display: none; */
-  /* } */
-  /* project-component:hover { */
-  /*   max-width: 100%; */
-  /*   background-color: #ddd; */
-  /*   border-radius: 10%; */
-  /*   transition: all 0.5s ease-in; */
-  /* } */
 }
 
 @media screen and (max-width: 767px) {
