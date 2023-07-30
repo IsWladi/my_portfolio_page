@@ -16,7 +16,7 @@ class ProjectComponent extends HTMLElement {
     this.github = this.getAttribute("github");
     let create_tags = this.getAttribute("tags").split(",");
     for (let i = 0; i < create_tags.length; i++) {
-      this.tags += `<span class="badge text-bg-info">${create_tags[i]}</span>`;
+      this.tags += `<span class="badge project-badge">${create_tags[i]}</span>`;
     }
     // Capitalize
     this.projectName = this.projectName.split(" ");

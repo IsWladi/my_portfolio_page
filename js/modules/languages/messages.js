@@ -16,9 +16,11 @@ export const MESSAGES = {
     },
     about_me: {
       presentation: "Hola, mi nombre es Wladimir",
-      litle_presentation: "Soy un desarrollador de software",
+      litle_presentation: "Programador trainee",
       big_presentation:
-        "Soy un desarrollador de software con experiencia en desarrollo web y ciencia de datos. Me gusta aprender nuevas tecnologías y aplicarlas en mis proyectos. Me gusta trabajar en equipo y compartir conocimientos.",
+        "Apasionado por la tecnología y el desarrollo de software, me gusta entender cómo funcionan las cosas y usarlas \
+        para crear cosas nuevas y creativas. Disfruto los retos tecnicos que hacen desafiar mis conocimientos y que me \
+        permiten ver con perspectiva mis habilidades y debilidades para mejorar como profesional y como persona.",
       meet_me: "Conóceme",
       interests: "Me gusta programar",
     },
@@ -94,9 +96,9 @@ export const MESSAGES = {
     },
     about_me: {
       presentation: "Hello, my name is Wladimir",
-      litle_presentation: "I am a software developer",
+      litle_presentation: "Trainee software developer",
       big_presentation:
-        "I am a software developer with experience in web development and data science. I like to learn new technologies and apply them in my projects. I like to work in teams and share knowledge.",
+        "Passionate about technology and software development, I enjoy understanding how things work and using them to create new and creative solutions. I embrace technical challenges that push my knowledge boundaries, allowing me to gain perspective on my strengths and weaknesses, and enabling me to grow both professionally and personally.",
       meet_me: "Meet me",
       interests: "I like coding",
     },
