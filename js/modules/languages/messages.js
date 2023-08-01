@@ -28,24 +28,25 @@ export const MESSAGES = {
       message: "Mi stack",
       description:
         "Me gusta trabajar en el ambito del backend y de a poco estoy aprendiendo frontend. Me desenvuelvo bien aprendiendo nuevas tecnologias y leyendo documentación en ingles",
+
+      docker: {
+        desc: "He utilizado Docker y Docker Compose para implementar proyectos en una máquina virtual EC2 de AWS, así como para configurar entornos de desarrollo local. En mi repositorio de GitHub, encontrarás proyectos con Dockerfiles y docker-compose.yml que contienen configuraciones e instrucciones para desplegar servicios de Django y Ionic, con bases de datos como MongoDB y PostgreSQL, y una API con FastAPI. Me siento confiado en mis habilidades para montar contenedores de diversas tecnologías con las que pueda trabajar.",
+        stars_full: "1234",
+        stars_half: "1",
+      },
       python: {
         desc: "Utilizo Python para desarrollo web con Django y desarrollo de APIs con FastAPI",
         stars_full: "1234",
         stars_half: "",
       },
-      docker: {
-        desc: "He utilizado Docker y Docker compose para desplegar un proyecto en una maquina virtual EC2 de AWS y tambien\
-              para montar entornos de desarrollo local",
-        stars_full: "1234",
+
+      html: {
+        desc: "Lo he implementado en mis proyectos que he desarrollado con Django y tambien para crear mi pagina web estatica. Estoy aprendiendo a usar buenas practicas, como usar etiquetas semanticas para diferenciar claramente la estructura.",
+        stars_full: "12",
         stars_half: "1",
       },
-      html: {
-        desc: "Utilizo HTML para el desarrollo de mis proyectos",
-        stars_full: "123",
-        stars_half: "",
-      },
       css: {
-        desc: "Utilizo CSS para el desarrollo de mis proyectos",
+        desc: "Lo he usado para mejorar diseños hechos con bootstrap, ahora me he centrado en aprender más sobre CSS nativo para entender mejor los frameworks de CSS",
         stars_full: "123",
         stars_half: "",
       },
@@ -107,25 +108,26 @@ export const MESSAGES = {
       message: "My stack",
       description:
         "I like to work in the backend and I am learning frontend. I am good at learning new technologies and reading documentation in English",
+
+      docker: {
+        desc: "I have used Docker and Docker Compose to deploy projects on an AWS EC2 virtual machine, as well as to set up local development environments. In my GitHub repository, you will find projects with Dockerfiles and docker-compose.yml files that contain configurations and instructions to deploy Django and Ionic services, with databases like MongoDB and PostgreSQL, and an API with FastAPI. I feel confident in my abilities to set up containers for various technologies I may work with.",
+        stars_full: "1234",
+        stars_half: "1",
+      },
       python: {
         desc: "I use Python for web development with Django and API development with FastAPI",
         stars_full: "1234",
         stars_half: "",
       },
-      docker: {
-        desc: "I used Docker and Docker Compose to deploy a project on an AWS EC2 virtual machine, as well as to set up local development environments.",
-        stars_full: "1234",
+
+      html: {
+        desc: "I have implemented it in my projects that I have developed with Django, and also to create my static webpage. I am learning to use good practices, such as using semantic tags to clearly differentiate the structure.",
+        stars_full: "12",
         stars_half: "1",
       },
 
-      html: {
-        desc: "I use HTML for the development of my projects",
-        stars_full: "123",
-        stars_half: "",
-      },
-
       css: {
-        desc: "I use CSS for the development of my projects",
+        desc: "I have used it to enhance designs made with Bootstrap, and now I have focused on learning more about native CSS to better understand CSS frameworks.",
         stars_full: "123",
         stars_half: "",
       },
