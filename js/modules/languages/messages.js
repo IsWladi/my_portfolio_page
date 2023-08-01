@@ -34,7 +34,8 @@ export const MESSAGES = {
         stars_half: "",
       },
       docker: {
-        desc: "Utilizo Docker para el desarrollo de mis proyectos",
+        desc: "He utilizado Docker y Docker compose para desplegar un proyecto en una maquina virtual EC2 de AWS y tambien\
+              para montar entornos de desarrollo local",
         stars_full: "1234",
         stars_half: "1",
       },
@@ -112,7 +113,7 @@ export const MESSAGES = {
         stars_half: "",
       },
       docker: {
-        desc: "I use Docker for the development of my projects",
+        desc: "I used Docker and Docker Compose to deploy a project on an AWS EC2 virtual machine, as well as to set up local development environments.",
         stars_full: "1234",
         stars_half: "1",
       },
