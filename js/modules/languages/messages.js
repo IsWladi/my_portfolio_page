@@ -11,7 +11,15 @@ export const MESSAGES = {
         about_me: "Sobre mí",
         projects: "Proyectos",
         contact: "Contacto",
-        testimonials: "Testimonios",
+      },
+      footer: {
+        message:
+          "Me actualizo y creo todos los días. <br /> Siéntete libre de contactarme para colaborar.",
+      },
+      projects: {
+        message: "Mis proyectos recientes",
+        description: "Estos son algunos de mis proyectos recientes. Puedes ver más en mi perfil de github",
+        more_projects_button: "Ver más proyectos",
       },
     },
     about_me: {
@@ -52,9 +60,6 @@ export const MESSAGES = {
       },
     },
     projects: {
-      message: "Mis proyectos recientes",
-      description: "Estos son algunos proyectos que he creado recientemente...",
-
       gamesite: {
         description: "Este es un proyecto de una pagina web de juegos",
         github:
@@ -93,7 +98,15 @@ export const MESSAGES = {
         about_me: "About me",
         projects: "Projects",
         contact: "Contact",
-        testimonials: "Testimonials",
+      },
+      projects: {
+        message: "My recent projects",
+        description: "These are some of my recent projects. You can see more in my github profile",
+        more_projects_button: "See more projects",
+      },
+      footer: {
+        message:
+          "I continually update myself and create every day. <br /> Feel free to contact me for collaboration.",
       },
     },
     about_me: {
@@ -134,9 +147,6 @@ export const MESSAGES = {
     },
 
     projects: {
-      message: "My recent projects",
-      description:
-        "These are some of my recent projects. You can see more in my github profile",
       gamesite: {
         description: "this is a game site that I made for my institute",
         github:
