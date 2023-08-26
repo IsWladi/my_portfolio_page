@@ -45,19 +45,10 @@ function setStackMessages(stackMessages) {
 }
 
 function setProjectMessages(projectMessages) {
-  // Insert title and description
-  document.querySelector(".project-message").innerHTML =
-    projectMessages.message;
-  document.querySelector(".project-desc").innerHTML =
-    projectMessages.description;
-
   // Insert all projects
   let projects = "";
   // iterate over object
   for (const [key, value] of Object.entries(projectMessages)) {
-    if (key == "description" || key == "message") {
-      continue;
-    }
     // create component
     const name = key;
     const desc = value.description;
@@ -80,7 +71,6 @@ function setGeneralMessages(generalMessages, selectedLanguage) {
   const navbar = generalMessages.page.navbar;
   document.getElementById("about-me").innerHTML = navbar.about_me;
   document.getElementById("projects").innerHTML = navbar.projects;
-  document.getElementById("testimonials").innerHTML = navbar.testimonials;
   document.getElementById("contact").innerHTML = navbar.contact;
   // navbar language selector
   let languagesKeys = "";
@@ -111,6 +101,15 @@ function setGeneralMessages(generalMessages, selectedLanguage) {
   document.getElementById("about-me-meet-me").innerHTML = aboutMe.meet_me;
   document.getElementById("about-me-big-presentation").innerHTML =
     aboutMe.big_presentation;
+  // projects section
+  document.querySelector(".project-message").innerHTML =
+    generalMessages.page.projects.message;
+  document.querySelector(".project-desc").innerHTML =
+    generalMessages.page.projects.description;
+  document.querySelector("button.more-projects-button>span.more-projects-text").innerHTML = generalMessages.page.projects.more_projects_button;
+  // footer
+  const footerMessage = generalMessages.page.footer.message;
+  document.getElementsByClassName("footer-texto")[0].innerHTML = footerMessage;
 }
 
 export function setAllMessages() {
